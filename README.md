@@ -2,9 +2,9 @@
 
 Python CLI application that generates YAML configuration files for the Network As Code for Cisco Secure Firewall Management Center (nac-fmc) Terraform module.
 
-Generated configuration is fully random, does not rely on previous generations, and is used only to demonstrate capabilities of the solution.
+Generated configuration is fully random, does not rely on previously generated output, and is used only to demonstrate capabilities of the solution.
 
-Sample configuration files are already generated in the `data/` folder. If these meet your needs, you can proceed directly to applying them with Terraform (see "Applying Configuration to FMC" section).
+> **Quick Start:** Sample configuration files are already generated in the `data/` folder. If these meet your needs, you can skip the generator and proceed directly to [Applying Configuration to FMC](#applying-configuration-to-fmc).
 
 ## About nac-fmc
 
@@ -27,7 +27,7 @@ This generator creates sample YAML configurations that can be used as input for 
 1. Create and activate virtual environment:
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate  # On Windows: venv\Scripts\activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 2. Install dependencies:
@@ -43,18 +43,18 @@ Edit the configuration file at `gen/cfg.yaml`:
 settings:
   - hosts_number: 10                      # Number of host objects to generate
   - networks_number: 10                   # Number of network objects to generate
-  - ranges_number: 10                     # Number of range objects to generate
+  - ranges_number: 4                      # Number of range objects to generate
   - ports_number: 10                      # Number of port objects to generate
-  - icmpv4s_number: 10                    # Number of ICMPv4 objects to generate
+  - icmpv4s_number: 6                     # Number of ICMPv4 objects to generate
   - security_zones_number: 10             # Number of security zone objects to generate
   - port_groups_number: 5                 # Number of port group objects to generate
-  - network_groups_number: 5              # Number of network group objects to generate
+  - network_groups_number: 10             # Number of network group objects to generate
   - urls_number: 10                       # Number of URL objects to generate
   - url_groups_number: 5                  # Number of URL group objects to generate
   - intrusion_policies_number: 3          # Number of intrusion policies to generate
-  - access_control_policies_number: 2     # Number of access control policies to generate
-  - access_control_categories_number: 4   # Number of categories per access control policy
-  - access_control_rules_number: 20       # Number of rules per access control policy
+  - access_control_policies_number: 1     # Number of access control policies to generate
+  - access_control_policy_categories_number: 4   # Number of categories per access control policy
+  - access_control_policy_rules_number: 300      # Number of rules per access control policy
 ```
 
 ## Usage
@@ -66,7 +66,7 @@ Run the generator (no command-line arguments needed):
 python gen/gen.py
 
 # Or without activating venv
-./venv/bin/python gen/gen.py
+./.venv/bin/python gen/gen.py
 ```
 
 The application will:
@@ -110,7 +110,7 @@ The generator supports the following FMC object types:
 - **Ports**: Random protocols (TCP/UDP/ESP), random ports (1024-65535) or port ranges, ESP protocol without port numbers
 - **ICMPv4**: Valid ICMP type/code combinations following IANA specifications (types: 0, 3, 5, 8, 11, 12, 40)
 - **Security Zones**: Random interface types (ROUTED, ASA, INLINE, SWITCHED)
-- **URLs**: Random subdomains from a predefined list of example.com domain
+- **URLs**: Random subdomains of example.com from a predefined list
 - **Port Groups**: Each group contains 2-6 randomly selected objects (ports and icmpv4s only)
 - **Network Groups**: Each group contains 3-5 randomly selected objects (hosts, networks, ranges, or other network groups)
 - **URL Groups**: Each group contains 2-4 references to existing URL objects and 1-3 literal URL values using random subdomains of example.com
@@ -144,4 +144,4 @@ For more information on configuring and using the nac-fmc module, refer to the [
 
 ## Data Model Documentation
 
-Data model describes the structure of the YAML files and is available at [https://netascode.cisco.com/docs/data_models/fmc/overview/](https://netascode.cisco.com/docs/data_models/fmc/overview/).
+The data model describes the structure of the YAML files and is available at [https://netascode.cisco.com/docs/data_models/fmc/overview/](https://netascode.cisco.com/docs/data_models/fmc/overview/).

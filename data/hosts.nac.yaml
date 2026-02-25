@@ -4,102 +4,22 @@ fmc:
     objects:
       hosts:
       - name: host_1
-        ip: 10.3.68.150
+        ip: 10.105.174.33
       - name: host_2
-        ip: 10.33.141.23
+        ip: 10.0.32.9
       - name: host_3
-        ip: 10.159.158.173
+        ip: 10.187.80.236
       - name: host_4
-        ip: 10.13.230.102
+        ip: 10.120.72.126
       - name: host_5
-        ip: 10.252.222.86
+        ip: 10.147.202.42
       - name: host_6
-        ip: 10.126.100.53
+        ip: 10.5.93.19
       - name: host_7
-        ip: 10.187.73.241
+        ip: 10.138.200.227
       - name: host_8
-        ip: 10.235.221.113
+        ip: 10.87.123.161
       - name: host_9
-        ip: 10.193.93.44
+        ip: 10.38.24.164
       - name: host_10
-        ip: 10.60.236.60
-      - name: host_11
-        ip: 10.188.187.42
-      - name: host_12
-        ip: 10.202.161.83
-      - name: host_13
-        ip: 10.111.144.108
-      - name: host_14
-        ip: 10.92.56.167
-      - name: host_15
-        ip: 10.13.74.114
-      - name: host_16
-        ip: 10.252.238.241
-      - name: host_17
-        ip: 10.247.188.20
-      - name: host_18
-        ip: 10.10.23.17
-      - name: host_19
-        ip: 10.171.65.191
-      - name: host_20
-        ip: 10.171.150.107
-      - name: host_21
-        ip: 10.167.97.205
-      - name: host_22
-        ip: 10.36.250.246
-      - name: host_23
-        ip: 10.142.145.249
-      - name: host_24
-        ip: 10.70.76.115
-      - name: host_25
-        ip: 10.229.37.186
-      - name: host_26
-        ip: 10.237.10.158
-      - name: host_27
-        ip: 10.112.225.44
-      - name: host_28
-        ip: 10.216.162.172
-      - name: host_29
-        ip: 10.223.169.52
-      - name: host_30
-        ip: 10.89.13.24
-      - name: host_31
-        ip: 10.24.37.237
-      - name: host_32
-        ip: 10.250.64.135
-      - name: host_33
-        ip: 10.144.216.156
-      - name: host_34
-        ip: 10.145.39.225
-      - name: host_35
-        ip: 10.121.36.4
-      - name: host_36
-        ip: 10.8.13.220
-      - name: host_37
-        ip: 10.156.213.89
-      - name: host_38
-        ip: 10.210.105.223
-      - name: host_39
-        ip: 10.176.75.111
-      - name: host_40
-        ip: 10.94.28.253
-      - name: host_41
-        ip: 10.252.174.66
-      - name: host_42
-        ip: 10.230.202.23
-      - name: host_43
-        ip: 10.239.37.84
-      - name: host_44
-        ip: 10.84.124.201
-      - name: host_45
-        ip: 10.48.216.241
-      - name: host_46
-        ip: 10.15.85.99
-      - name: host_47
-        ip: 10.82.58.30
-      - name: host_48
-        ip: 10.91.101.19
-      - name: host_49
-        ip: 10.223.148.10
-      - name: host_50
-        ip: 10.227.221.235
+        ip: 10.7.250.46

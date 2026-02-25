@@ -4,62 +4,22 @@ fmc:
     objects:
       urls:
       - name: url_1
-        url: https://wiki.example.com
+        url: https://admin.example.com
       - name: url_2
-        url: https://help.example.com
+        url: https://blog.example.com
       - name: url_3
-        url: https://portal.example.com
-      - name: url_4
-        url: https://app.example.com
-      - name: url_5
         url: https://dev.example.com
+      - name: url_4
+        url: https://blog.example.com
+      - name: url_5
+        url: https://news.example.com
       - name: url_6
-        url: https://www.example.com
+        url: https://store.example.com
       - name: url_7
-        url: https://wiki.example.com
+        url: https://news.example.com
       - name: url_8
-        url: https://docs.example.com
+        url: https://staging.example.com
       - name: url_9
         url: https://news.example.com
       - name: url_10
-        url: https://wiki.example.com
-      - name: url_11
-        url: https://staging.example.com
-      - name: url_12
-        url: https://news.example.com
-      - name: url_13
-        url: https://admin.example.com
-      - name: url_14
-        url: https://api.example.com
-      - name: url_15
-        url: https://www.example.com
-      - name: url_16
-        url: https://support.example.com
-      - name: url_17
-        url: https://support.example.com
-      - name: url_18
-        url: https://wiki.example.com
-      - name: url_19
-        url: https://prod.example.com
-      - name: url_20
-        url: https://api.example.com
-      - name: url_21
-        url: https://api.example.com
-      - name: url_22
-        url: https://store.example.com
-      - name: url_23
-        url: https://mail.example.com
-      - name: url_24
-        url: https://support.example.com
-      - name: url_25
-        url: https://news.example.com
-      - name: url_26
-        url: https://help.example.com
-      - name: url_27
-        url: https://admin.example.com
-      - name: url_28
-        url: https://dev.example.com
-      - name: url_29
-        url: https://store.example.com
-      - name: url_30
-        url: https://staging.example.com
+        url: https://test.example.com

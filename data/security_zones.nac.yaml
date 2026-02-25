@@ -4,22 +4,22 @@ fmc:
     objects:
       security_zones:
       - name: security_zone_1
-        interface_type: ROUTED
+        interface_type: ASA
       - name: security_zone_2
         interface_type: SWITCHED
       - name: security_zone_3
-        interface_type: INLINE
+        interface_type: SWITCHED
       - name: security_zone_4
-        interface_type: ASA
+        interface_type: SWITCHED
       - name: security_zone_5
         interface_type: ASA
       - name: security_zone_6
-        interface_type: ROUTED
+        interface_type: ASA
       - name: security_zone_7
-        interface_type: ASA
-      - name: security_zone_8
         interface_type: INLINE
+      - name: security_zone_8
+        interface_type: ROUTED
       - name: security_zone_9
-        interface_type: ASA
+        interface_type: INLINE
       - name: security_zone_10
-        interface_type: ASA
+        interface_type: SWITCHED

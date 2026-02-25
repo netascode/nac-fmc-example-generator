@@ -5,120 +5,33 @@ fmc:
       port_groups:
       - name: port_group_1
         objects:
-        - port_29
-        - port_42
-        - port_38
-        - port_6
+        - icmpv4_1
+        - port_9
       - name: port_group_2
         objects:
-        - port_48
+        - port_7
         - icmpv4_5
-        - port_13
-        - port_31
-        - port_39
-        - icmpv4_2
+        - port_4
+        - port_9
+        - icmpv4_1
       - name: port_group_3
         objects:
-        - icmpv4_22
-        - port_48
-        - icmpv4_4
-        - port_25
-        - port_6
+        - port_9
+        - icmpv4_1
+        - port_1
+        - port_4
+        - port_8
+        - icmpv4_2
       - name: port_group_4
         objects:
-        - port_18
-        - port_43
-        - icmpv4_15
+        - icmpv4_6
+        - icmpv4_4
+        - icmpv4_3
       - name: port_group_5
         objects:
-        - port_44
-        - port_22
-        - icmpv4_9
-        - icmpv4_4
-        - port_9
-        - port_50
-      - name: port_group_6
-        objects:
-        - icmpv4_8
-        - icmpv4_14
-      - name: port_group_7
-        objects:
-        - port_9
-        - port_15
-        - port_11
-        - port_39
-        - icmpv4_17
-      - name: port_group_8
-        objects:
-        - port_41
-        - port_2
-        - port_3
-        - icmpv4_22
-        - port_29
         - port_6
-      - name: port_group_9
-        objects:
-        - port_15
-        - port_12
-      - name: port_group_10
-        objects:
-        - icmpv4_7
-        - icmpv4_10
-        - icmpv4_4
-      - name: port_group_11
-        objects:
-        - port_18
-        - icmpv4_27
-        - port_22
-        - port_25
-        - icmpv4_17
-      - name: port_group_12
-        objects:
-        - icmpv4_23
-        - icmpv4_25
-        - port_32
-        - icmpv4_27
-        - port_12
-        - icmpv4_24
-      - name: port_group_13
-        objects:
-        - port_1
-        - port_37
-        - port_6
-      - name: port_group_14
-        objects:
-        - port_29
-        - icmpv4_27
-      - name: port_group_15
-        objects:
-        - port_48
-        - port_35
-        - port_9
-        - icmpv4_30
-      - name: port_group_16
-        objects:
-        - icmpv4_15
-        - icmpv4_5
-      - name: port_group_17
-        objects:
-        - icmpv4_5
-        - icmpv4_22
-        - icmpv4_9
-      - name: port_group_18
-        objects:
-        - port_30
-        - icmpv4_11
-        - icmpv4_13
-        - icmpv4_21
-        - port_3
-      - name: port_group_19
-        objects:
-        - port_22
-        - icmpv4_20
-        - icmpv4_16
-        - port_9
-        - port_18
-      - name: port_group_20
-        objects:
-        - port_43
-        - icmpv4_20
+        - icmpv4_2
+        - port_5
+        - icmpv4_1
+        - port_10
+        - port_8

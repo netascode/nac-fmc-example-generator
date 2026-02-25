@@ -5,45 +5,42 @@ fmc:
       url_groups:
       - name: url_group_1
         urls:
-        - url_17
         - url_4
+        - url_3
         - url_1
         literals:
-        - https://cdn.example.com
-        - https://blog.example.com
+        - https://wiki.example.com
       - name: url_group_2
         urls:
-        - url_12
+        - url_7
+        - url_3
         - url_10
-        - url_25
+        - url_2
         literals:
-        - https://news.example.com
-        - https://web.example.com
-        - https://test.example.com
+        - https://support.example.com
       - name: url_group_3
         urls:
-        - url_16
-        - url_2
         - url_10
+        - url_5
+        - url_8
+        - url_9
         literals:
-        - https://prod.example.com
-        - https://api.example.com
+        - https://dev.example.com
+        - https://test.example.com
+        - https://shop.example.com
       - name: url_group_4
         urls:
         - url_4
-        - url_1
-        - url_28
-        - url_14
+        - url_9
         literals:
-        - https://prod.example.com
-        - https://app.example.com
+        - https://api.example.com
+        - https://cdn.example.com
+        - https://wiki.example.com
       - name: url_group_5
         urls:
-        - url_27
-        - url_20
-        - url_5
-        - url_15
+        - url_9
+        - url_6
         literals:
-        - https://support.example.com
-        - https://staging.example.com
-        - https://dev.example.com
+        - https://web.example.com
+        - https://prod.example.com
+        - https://help.example.com

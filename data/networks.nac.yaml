@@ -4,102 +4,22 @@ fmc:
     objects:
       networks:
       - name: network_1
-        prefix: 10.150.0.0/16
+        prefix: 10.252.196.96/27
       - name: network_2
-        prefix: 10.231.0.0/16
+        prefix: 10.66.112.0/20
       - name: network_3
-        prefix: 10.114.0.0/17
+        prefix: 10.23.128.0/23
       - name: network_4
-        prefix: 10.132.56.0/21
+        prefix: 10.97.192.0/26
       - name: network_5
-        prefix: 10.204.85.0/26
+        prefix: 10.133.208.0/20
       - name: network_6
-        prefix: 10.249.96.0/19
+        prefix: 10.128.128.0/19
       - name: network_7
-        prefix: 10.95.206.0/23
+        prefix: 10.156.185.160/27
       - name: network_8
-        prefix: 10.165.0.0/16
+        prefix: 10.13.7.0/24
       - name: network_9
-        prefix: 10.29.152.0/23
+        prefix: 10.143.223.128/26
       - name: network_10
-        prefix: 10.212.40.0/26
-      - name: network_11
-        prefix: 10.74.0.0/16
-      - name: network_12
-        prefix: 10.198.201.32/28
-      - name: network_13
-        prefix: 10.174.62.0/24
-      - name: network_14
-        prefix: 10.15.93.0/25
-      - name: network_15
-        prefix: 10.114.208.0/20
-      - name: network_16
-        prefix: 10.157.0.0/19
-      - name: network_17
-        prefix: 10.112.201.32/27
-      - name: network_18
-        prefix: 10.20.240.160/28
-      - name: network_19
-        prefix: 10.236.107.128/26
-      - name: network_20
-        prefix: 10.189.95.192/26
-      - name: network_21
-        prefix: 10.103.66.0/24
-      - name: network_22
-        prefix: 10.159.60.0/23
-      - name: network_23
-        prefix: 10.202.243.0/25
-      - name: network_24
-        prefix: 10.207.102.16/28
-      - name: network_25
-        prefix: 10.46.198.0/25
-      - name: network_26
-        prefix: 10.225.128.0/19
-      - name: network_27
-        prefix: 10.120.6.0/23
-      - name: network_28
-        prefix: 10.139.50.0/23
-      - name: network_29
-        prefix: 10.154.192.0/18
-      - name: network_30
-        prefix: 10.217.48.0/20
-      - name: network_31
-        prefix: 10.18.216.0/22
-      - name: network_32
-        prefix: 10.67.146.0/23
-      - name: network_33
-        prefix: 10.135.117.0/25
-      - name: network_34
-        prefix: 10.185.105.0/24
-      - name: network_35
-        prefix: 10.111.237.64/26
-      - name: network_36
-        prefix: 10.249.166.0/23
-      - name: network_37
-        prefix: 10.171.120.0/21
-      - name: network_38
-        prefix: 10.250.144.0/20
-      - name: network_39
-        prefix: 10.150.198.0/24
-      - name: network_40
-        prefix: 10.153.21.0/25
-      - name: network_41
-        prefix: 10.178.4.0/23
-      - name: network_42
-        prefix: 10.170.134.128/25
-      - name: network_43
-        prefix: 10.163.65.128/28
-      - name: network_44
-        prefix: 10.31.48.0/20
-      - name: network_45
-        prefix: 10.222.24.0/21
-      - name: network_46
-        prefix: 10.236.128.0/17
-      - name: network_47
-        prefix: 10.185.108.0/23
-      - name: network_48
-        prefix: 10.171.176.0/25
-      - name: network_49
-        prefix: 10.203.32.0/19
-      - name: network_50
-        prefix: 10.88.128.0/17
+        prefix: 10.16.0.0/16

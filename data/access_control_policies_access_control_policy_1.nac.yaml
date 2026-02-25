@@ -1,0 +1,4295 @@
+fmc:
+  domains:
+  - name: Global
+    policies:
+      access_control_policies:
+      - name: access_control_policy_1
+        default_action: NETWORK_DISCOVERY
+        categories:
+        - name: category_1_1
+          section: mandatory
+        - name: category_1_2
+          section: mandatory
+        - name: category_1_3
+          section: default
+        - name: category_1_4
+          section: default
+        access_rules:
+        - name: rule_1_1
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_9
+          destination_zones:
+          - security_zone_1
+          destination_network_objects:
+          - network_group_6
+          destination_port_objects:
+          - port_4
+          - port_9
+          - icmpv4_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_2
+          action: ALLOW
+          category: category_1_1
+          source_zones:
+          - security_zone_8
+          - security_zone_5
+          destination_zones:
+          - security_zone_3
+          - security_zone_8
+          - security_zone_6
+          source_network_objects:
+          - host_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_3
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_network_objects:
+          - range_3
+          - host_6
+          url_objects:
+          - url_4
+          - url_group_3
+          - url_3
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_4
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_10
+          - security_zone_1
+          destination_port_objects:
+          - port_group_4
+          url_objects:
+          - url_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_5
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_zones:
+          - security_zone_4
+          - security_zone_3
+          - security_zone_6
+          source_network_objects:
+          - network_group_9
+          - network_group_5
+          - network_group_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_6
+          action: MONITOR
+          category: category_1_1
+          destination_zones:
+          - security_zone_8
+          - security_zone_3
+          destination_port_objects:
+          - port_group_5
+          - port_5
+          - port_group_3
+          - port_group_2
+          - port_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_7
+          action: BLOCK_RESET
+          category: category_1_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_8
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          source_zones:
+          - security_zone_6
+          - security_zone_7
+          - security_zone_1
+          destination_zones:
+          - security_zone_4
+          - security_zone_9
+          destination_port_objects:
+          - icmpv4_2
+          - icmpv4_4
+          - port_group_1
+          - port_group_5
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_9
+          action: TRUST
+          category: category_1_1
+          source_zones:
+          - security_zone_3
+          - security_zone_1
+          source_network_objects:
+          - host_3
+          - network_group_4
+          - network_8
+          - host_10
+          - network_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_10
+          action: TRUST
+          category: category_1_1
+          destination_zones:
+          - security_zone_10
+          - security_zone_1
+          destination_network_objects:
+          - host_8
+          - network_group_3
+          - host_5
+          - network_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_11
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_group_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_12
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          source_network_objects:
+          - network_group_2
+          - host_7
+          - host_8
+          url_objects:
+          - url_9
+          - url_5
+          - url_7
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_13
+          action: BLOCK
+          category: category_1_1
+          source_network_objects:
+          - network_group_2
+          destination_network_objects:
+          - network_group_2
+          - network_group_10
+          - network_group_3
+          - network_group_6
+          - network_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_14
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_2
+          destination_zones:
+          - security_zone_5
+          - security_zone_2
+          source_network_objects:
+          - host_1
+          destination_network_objects:
+          - host_4
+          - host_6
+          - host_3
+          - network_group_1
+          - network_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_15
+          action: BLOCK
+          category: category_1_1
+          source_network_objects:
+          - network_group_10
+          - host_9
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_16
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          source_network_objects:
+          - range_1
+          destination_network_objects:
+          - network_5
+          - network_2
+          - host_4
+          - host_1
+          url_objects:
+          - url_group_3
+          - url_9
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_17
+          action: MONITOR
+          category: category_1_1
+          destination_zones:
+          - security_zone_4
+          destination_network_objects:
+          - network_10
+          - host_10
+          - network_group_3
+          - network_group_9
+          - range_2
+          destination_port_objects:
+          - icmpv4_6
+          - port_9
+          - port_8
+          url_objects:
+          - url_group_1
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_18
+          action: MONITOR
+          category: category_1_1
+          source_zones:
+          - security_zone_9
+          - security_zone_3
+          - security_zone_7
+          destination_network_objects:
+          - network_5
+          - network_group_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_19
+          action: TRUST
+          category: category_1_1
+          destination_port_objects:
+          - icmpv4_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_20
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          source_zones:
+          - security_zone_5
+          - security_zone_3
+          - security_zone_8
+          destination_zones:
+          - security_zone_4
+          - security_zone_8
+          - security_zone_9
+          destination_port_objects:
+          - icmpv4_4
+          - icmpv4_5
+          - port_group_5
+          - port_4
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_21
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_port_objects:
+          - port_1
+          - port_4
+          - port_group_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_22
+          action: BLOCK_RESET
+          category: category_1_1
+          destination_zones:
+          - security_zone_10
+          - security_zone_9
+          destination_port_objects:
+          - port_group_3
+          url_objects:
+          - url_6
+          - url_3
+          - url_group_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_23
+          action: ALLOW
+          category: category_1_1
+          source_network_objects:
+          - network_group_2
+          - range_3
+          - host_9
+          - host_10
+          url_objects:
+          - url_group_5
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_24
+          action: ALLOW
+          category: category_1_1
+          destination_zones:
+          - security_zone_9
+          destination_port_objects:
+          - icmpv4_1
+          - port_group_4
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_25
+          action: BLOCK
+          category: category_1_1
+          source_network_objects:
+          - host_10
+          - host_8
+          - network_2
+          - network_group_6
+          destination_port_objects:
+          - icmpv4_3
+          - port_group_3
+          - icmpv4_2
+          - icmpv4_6
+          - port_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_26
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_network_objects:
+          - network_group_10
+          - network_group_9
+          - network_group_1
+          - network_group_5
+          - network_9
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_27
+          action: MONITOR
+          category: category_1_1
+          source_zones:
+          - security_zone_10
+          - security_zone_4
+          - security_zone_2
+          source_network_objects:
+          - network_5
+          - network_group_2
+          - network_group_7
+          destination_port_objects:
+          - port_group_4
+          - icmpv4_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_28
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_29
+          action: ALLOW
+          category: category_1_1
+          destination_zones:
+          - security_zone_8
+          source_network_objects:
+          - network_10
+          - network_group_9
+          - host_8
+          - network_group_8
+          - network_9
+          url_objects:
+          - url_3
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_30
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_5
+          source_network_objects:
+          - network_7
+          - network_group_3
+          - host_7
+          - network_group_4
+          - network_group_2
+          destination_network_objects:
+          - network_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_31
+          action: MONITOR
+          category: category_1_1
+          destination_port_objects:
+          - port_1
+          - port_group_4
+          - port_9
+          - port_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_32
+          action: BLOCK
+          category: category_1_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_33
+          action: ALLOW
+          category: category_1_1
+          destination_network_objects:
+          - host_9
+          - host_8
+          - network_group_6
+          - host_7
+          - network_group_6
+          url_objects:
+          - url_group_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_34
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_port_objects:
+          - port_group_1
+          - port_group_2
+          - port_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_35
+          action: BLOCK_RESET
+          category: category_1_1
+          destination_zones:
+          - security_zone_7
+          url_objects:
+          - url_group_5
+          - url_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_36
+          action: BLOCK_RESET
+          category: category_1_1
+          source_zones:
+          - security_zone_1
+          - security_zone_9
+          - security_zone_4
+          source_network_objects:
+          - network_6
+          destination_network_objects:
+          - network_9
+          - host_1
+          - host_2
+          - network_group_5
+          destination_port_objects:
+          - port_9
+          - port_group_2
+          url_objects:
+          - url_6
+          - url_group_4
+          - url_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_37
+          action: TRUST
+          category: category_1_1
+          destination_zones:
+          - security_zone_4
+          - security_zone_3
+          destination_network_objects:
+          - network_group_10
+          - network_3
+          - network_4
+          - network_group_4
+          destination_port_objects:
+          - port_10
+          - port_group_3
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_38
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_group_8
+          - host_9
+          - network_group_1
+          destination_port_objects:
+          - port_group_2
+          - port_group_3
+          - port_4
+          - icmpv4_6
+          - port_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_39
+          action: ALLOW
+          category: category_1_1
+          source_zones:
+          - security_zone_7
+          - security_zone_10
+          source_network_objects:
+          - network_8
+          - network_10
+          - network_group_8
+          - network_6
+          destination_port_objects:
+          - port_group_3
+          - port_group_2
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_40
+          action: MONITOR
+          category: category_1_1
+          destination_network_objects:
+          - network_3
+          url_objects:
+          - url_group_4
+          - url_2
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_41
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_zones:
+          - security_zone_8
+          destination_network_objects:
+          - network_group_5
+          - network_group_6
+          - network_group_2
+          - range_3
+          url_objects:
+          - url_group_4
+          - url_4
+          - url_1
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_42
+          action: ALLOW
+          category: category_1_1
+          source_zones:
+          - security_zone_10
+          - security_zone_2
+          destination_zones:
+          - security_zone_4
+          - security_zone_3
+          source_network_objects:
+          - host_2
+          - network_group_2
+          destination_port_objects:
+          - port_9
+          - port_8
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_43
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - host_2
+          - host_4
+          - network_group_1
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_44
+          action: BLOCK_RESET
+          category: category_1_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_45
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_group_4
+          - network_4
+          - network_group_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_46
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          url_objects:
+          - url_4
+          - url_group_2
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_47
+          action: BLOCK
+          category: category_1_1
+          destination_zones:
+          - security_zone_8
+          - security_zone_4
+          - security_zone_10
+          source_network_objects:
+          - network_8
+          - network_group_6
+          - network_group_8
+          - network_group_9
+          destination_network_objects:
+          - network_group_2
+          - network_group_7
+          - network_group_2
+          - network_6
+          - network_group_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_48
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_zones:
+          - security_zone_8
+          - security_zone_5
+          source_network_objects:
+          - range_4
+          - network_group_2
+          - host_4
+          destination_network_objects:
+          - network_group_8
+          - host_7
+          - network_group_2
+          - host_10
+          url_objects:
+          - url_4
+          - url_group_3
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_49
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_1
+          - host_3
+          - network_group_2
+          - range_2
+          destination_network_objects:
+          - host_7
+          - host_1
+          - network_10
+          - network_4
+          - network_group_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_50
+          action: ALLOW
+          category: category_1_1
+          destination_network_objects:
+          - network_group_5
+          - host_8
+          - host_3
+          destination_port_objects:
+          - icmpv4_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_51
+          action: BLOCK
+          category: category_1_1
+          source_network_objects:
+          - network_4
+          - network_group_2
+          - network_group_3
+          - network_group_10
+          destination_port_objects:
+          - icmpv4_6
+          - icmpv4_4
+          - port_6
+          - port_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_52
+          action: BLOCK_RESET
+          category: category_1_1
+          destination_port_objects:
+          - port_3
+          - icmpv4_3
+          - port_group_1
+          - port_9
+          - icmpv4_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_53
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_9
+          - security_zone_5
+          - security_zone_1
+          destination_zones:
+          - security_zone_2
+          - security_zone_4
+          source_network_objects:
+          - network_group_7
+          destination_port_objects:
+          - port_1
+          - port_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_54
+          action: MONITOR
+          category: category_1_1
+          source_zones:
+          - security_zone_3
+          - security_zone_5
+          source_network_objects:
+          - network_group_2
+          - network_group_7
+          - network_group_10
+          - network_3
+          - network_9
+          destination_port_objects:
+          - port_group_1
+          - port_group_3
+          - icmpv4_3
+          - port_group_5
+          - port_4
+          url_objects:
+          - url_10
+          - url_2
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_55
+          action: TRUST
+          category: category_1_1
+          destination_network_objects:
+          - network_group_4
+          - host_8
+          - host_7
+          destination_port_objects:
+          - port_10
+          - port_group_5
+          - port_group_2
+          url_objects:
+          - url_7
+          - url_4
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_56
+          action: MONITOR
+          category: category_1_1
+          source_network_objects:
+          - network_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_57
+          action: BLOCK_RESET
+          category: category_1_1
+          source_zones:
+          - security_zone_10
+          - security_zone_9
+          - security_zone_6
+          destination_network_objects:
+          - network_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_58
+          action: MONITOR
+          category: category_1_1
+          source_zones:
+          - security_zone_2
+          - security_zone_1
+          - security_zone_6
+          source_network_objects:
+          - range_3
+          - network_2
+          url_objects:
+          - url_7
+          - url_10
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_59
+          action: ALLOW
+          category: category_1_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_60
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - host_1
+          - network_6
+          - network_3
+          destination_network_objects:
+          - network_8
+          - network_group_8
+          - network_9
+          - network_group_2
+          destination_port_objects:
+          - port_group_4
+          - port_1
+          - icmpv4_4
+          - port_6
+          - icmpv4_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_61
+          action: TRUST
+          category: category_1_1
+          url_objects:
+          - url_6
+          - url_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_62
+          action: BLOCK
+          category: category_1_1
+          source_network_objects:
+          - network_5
+          destination_network_objects:
+          - network_7
+          - network_group_9
+          - network_group_6
+          - host_6
+          url_objects:
+          - url_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_63
+          action: ALLOW
+          category: category_1_1
+          source_network_objects:
+          - network_group_3
+          destination_network_objects:
+          - network_group_10
+          - network_group_4
+          - network_group_7
+          - network_7
+          - network_group_5
+          url_objects:
+          - url_group_5
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_64
+          action: BLOCK_RESET
+          category: category_1_1
+          source_network_objects:
+          - network_2
+          - host_7
+          - host_5
+          - host_2
+          - host_1
+          destination_network_objects:
+          - range_3
+          - network_group_6
+          - network_6
+          - host_6
+          destination_port_objects:
+          - port_1
+          - icmpv4_3
+          - port_7
+          - port_group_2
+          url_objects:
+          - url_8
+          - url_group_1
+          - url_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_65
+          action: BLOCK_RESET
+          category: category_1_1
+          source_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_group_10
+          - network_1
+          - network_group_6
+          - host_1
+          - network_9
+          destination_network_objects:
+          - host_6
+          - network_group_7
+          - host_7
+          - range_1
+          - network_group_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_66
+          action: BLOCK_RESET
+          category: category_1_1
+          source_zones:
+          - security_zone_5
+          - security_zone_7
+          source_network_objects:
+          - host_2
+          - network_group_10
+          destination_port_objects:
+          - icmpv4_4
+          - port_2
+          - port_6
+          url_objects:
+          - url_group_5
+          - url_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_67
+          action: MONITOR
+          category: category_1_1
+          source_network_objects:
+          - network_9
+          - network_8
+          destination_port_objects:
+          - port_2
+          - port_10
+          url_objects:
+          - url_5
+          - url_6
+          - url_10
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_68
+          action: ALLOW
+          category: category_1_1
+          destination_zones:
+          - security_zone_1
+          - security_zone_10
+          - security_zone_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_69
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_8
+          - network_group_8
+          - host_2
+          - network_group_1
+          url_objects:
+          - url_group_5
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_70
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          destination_zones:
+          - security_zone_5
+          destination_network_objects:
+          - host_4
+          - network_9
+          - host_8
+          url_objects:
+          - url_group_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_71
+          action: BLOCK
+          category: category_1_1
+          source_zones:
+          - security_zone_2
+          destination_network_objects:
+          - network_group_4
+          - network_5
+          - range_3
+          - network_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_72
+          action: TRUST
+          category: category_1_1
+          source_network_objects:
+          - network_group_9
+          - range_3
+          - network_7
+          - host_2
+          destination_network_objects:
+          - host_6
+          - network_10
+          - network_8
+          - network_group_7
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_73
+          action: ALLOW
+          category: category_1_1
+          source_zones:
+          - security_zone_10
+          - security_zone_1
+          destination_zones:
+          - security_zone_4
+          - security_zone_9
+          destination_port_objects:
+          - icmpv4_5
+          - icmpv4_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_74
+          action: BLOCK_RESET
+          category: category_1_1
+          source_network_objects:
+          - host_8
+          - range_1
+          - host_3
+          - host_4
+          - range_3
+          url_objects:
+          - url_5
+          - url_2
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_75
+          action: BLOCK_INTERACTIVE
+          category: category_1_1
+          source_zones:
+          - security_zone_8
+          - security_zone_5
+          - security_zone_4
+          destination_zones:
+          - security_zone_8
+          source_network_objects:
+          - network_group_8
+          - network_7
+          destination_port_objects:
+          - icmpv4_2
+          url_objects:
+          - url_group_3
+          - url_8
+          - url_group_2
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_76
+          action: MONITOR
+          category: category_1_2
+          destination_zones:
+          - security_zone_5
+          destination_network_objects:
+          - network_3
+          - host_9
+          destination_port_objects:
+          - port_7
+          - icmpv4_2
+          - port_2
+          - port_8
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_77
+          action: TRUST
+          category: category_1_2
+          source_network_objects:
+          - network_group_10
+          - network_group_7
+          destination_port_objects:
+          - port_group_1
+          - port_1
+          - port_7
+          - port_2
+          url_objects:
+          - url_group_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_78
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - network_4
+          - network_group_5
+          - host_10
+          - host_6
+          - network_group_4
+          destination_network_objects:
+          - network_group_10
+          - range_1
+          - network_9
+          - network_group_10
+          - network_group_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_79
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_network_objects:
+          - network_group_7
+          - network_group_3
+          - network_group_4
+          destination_network_objects:
+          - host_10
+          - range_1
+          - network_group_7
+          - network_4
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_80
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          url_objects:
+          - url_group_4
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_81
+          action: MONITOR
+          category: category_1_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_82
+          action: BLOCK
+          category: category_1_2
+          source_zones:
+          - security_zone_1
+          - security_zone_10
+          - security_zone_4
+          destination_zones:
+          - security_zone_4
+          source_network_objects:
+          - host_10
+          - network_4
+          - network_group_4
+          - network_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_83
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_84
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_10
+          destination_zones:
+          - security_zone_6
+          source_network_objects:
+          - network_8
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_85
+          action: BLOCK
+          category: category_1_2
+          destination_network_objects:
+          - host_1
+          - range_1
+          - network_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_86
+          action: TRUST
+          category: category_1_2
+          source_zones:
+          - security_zone_4
+          destination_zones:
+          - security_zone_4
+          - security_zone_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_87
+          action: MONITOR
+          category: category_1_2
+          source_zones:
+          - security_zone_7
+          - security_zone_6
+          - security_zone_9
+          destination_zones:
+          - security_zone_5
+          - security_zone_1
+          - security_zone_10
+          destination_port_objects:
+          - port_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_88
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_9
+          - security_zone_6
+          - security_zone_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_89
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_6
+          - security_zone_1
+          source_network_objects:
+          - host_6
+          - range_4
+          destination_port_objects:
+          - port_group_1
+          - port_group_3
+          - port_group_4
+          - port_7
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_90
+          action: BLOCK_RESET
+          category: category_1_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_91
+          action: MONITOR
+          category: category_1_2
+          source_network_objects:
+          - network_3
+          - network_group_6
+          - network_group_2
+          - network_1
+          destination_network_objects:
+          - network_group_1
+          - network_group_4
+          - network_group_1
+          - network_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_92
+          action: TRUST
+          category: category_1_2
+          source_network_objects:
+          - network_7
+          - network_group_3
+          - network_group_3
+          - network_group_8
+          - network_3
+          destination_port_objects:
+          - port_group_2
+          - port_6
+          - port_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_93
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_5
+          - security_zone_10
+          source_network_objects:
+          - network_group_8
+          - network_8
+          - network_group_5
+          - network_group_2
+          - network_6
+          destination_network_objects:
+          - host_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_94
+          action: BLOCK
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          destination_network_objects:
+          - host_5
+          - host_4
+          - network_group_10
+          - host_3
+          destination_port_objects:
+          - port_2
+          - port_3
+          - icmpv4_1
+          - port_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_95
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_network_objects:
+          - host_5
+          destination_port_objects:
+          - icmpv4_5
+          - port_group_5
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_96
+          action: MONITOR
+          category: category_1_2
+          destination_network_objects:
+          - network_group_5
+          - network_group_4
+          - network_5
+          - host_2
+          - network_group_10
+          destination_port_objects:
+          - icmpv4_6
+          - port_7
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_97
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          destination_zones:
+          - security_zone_10
+          - security_zone_2
+          - security_zone_3
+          destination_network_objects:
+          - range_3
+          - host_5
+          - network_group_1
+          - host_1
+          - network_group_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_98
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_network_objects:
+          - network_group_8
+          - network_group_8
+          - host_9
+          - host_8
+          - network_group_10
+          destination_network_objects:
+          - host_4
+          url_objects:
+          - url_group_2
+          - url_6
+          - url_7
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_99
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          - security_zone_4
+          destination_zones:
+          - security_zone_9
+          - security_zone_10
+          destination_network_objects:
+          - host_6
+          url_objects:
+          - url_group_5
+          - url_8
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_100
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          destination_zones:
+          - security_zone_7
+          - security_zone_5
+          destination_network_objects:
+          - network_group_8
+          - network_group_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_101
+          action: TRUST
+          category: category_1_2
+          source_network_objects:
+          - network_4
+          - network_group_3
+          destination_port_objects:
+          - port_8
+          - port_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_102
+          action: MONITOR
+          category: category_1_2
+          source_zones:
+          - security_zone_9
+          destination_zones:
+          - security_zone_5
+          - security_zone_9
+          - security_zone_1
+          destination_network_objects:
+          - host_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_103
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - host_10
+          - network_group_6
+          - range_1
+          - range_3
+          url_objects:
+          - url_6
+          - url_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_104
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_zones:
+          - security_zone_5
+          - security_zone_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_105
+          action: BLOCK
+          category: category_1_2
+          url_objects:
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_106
+          action: ALLOW
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          - security_zone_1
+          source_network_objects:
+          - network_group_10
+          - host_1
+          - network_group_8
+          - network_group_3
+          destination_network_objects:
+          - network_group_7
+          - network_1
+          - host_5
+          - range_4
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_107
+          action: TRUST
+          category: category_1_2
+          destination_zones:
+          - security_zone_2
+          destination_network_objects:
+          - network_group_2
+          - network_group_8
+          - network_5
+          - network_8
+          - host_9
+          url_objects:
+          - url_2
+          - url_10
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_108
+          action: ALLOW
+          category: category_1_2
+          destination_network_objects:
+          - range_4
+          - host_2
+          - host_3
+          - network_9
+          url_objects:
+          - url_group_1
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_109
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_8
+          - security_zone_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_110
+          action: TRUST
+          category: category_1_2
+          destination_network_objects:
+          - network_group_10
+          - network_3
+          - host_1
+          - network_group_10
+          url_objects:
+          - url_7
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_111
+          action: TRUST
+          category: category_1_2
+          source_zones:
+          - security_zone_7
+          destination_zones:
+          - security_zone_5
+          - security_zone_2
+          destination_network_objects:
+          - network_8
+          - network_group_4
+          - network_4
+          - network_3
+          destination_port_objects:
+          - port_7
+          - port_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_112
+          action: TRUST
+          category: category_1_2
+          destination_zones:
+          - security_zone_10
+          - security_zone_8
+          - security_zone_5
+          source_network_objects:
+          - network_group_8
+          destination_port_objects:
+          - port_group_1
+          - port_1
+          - port_4
+          - port_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_113
+          action: MONITOR
+          category: category_1_2
+          destination_network_objects:
+          - network_7
+          - host_10
+          - network_group_4
+          - network_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_114
+          action: BLOCK
+          category: category_1_2
+          destination_network_objects:
+          - host_7
+          url_objects:
+          - url_9
+          - url_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_115
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          destination_port_objects:
+          - port_group_1
+          - icmpv4_3
+          - port_10
+          url_objects:
+          - url_group_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_116
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_117
+          action: MONITOR
+          category: category_1_2
+          source_network_objects:
+          - network_6
+          - network_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_118
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_8
+          - security_zone_10
+          - security_zone_9
+          source_network_objects:
+          - network_group_10
+          - host_1
+          - host_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_119
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - host_6
+          - network_group_10
+          - host_10
+          - network_group_1
+          - network_group_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_120
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_121
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_zones:
+          - security_zone_4
+          - security_zone_2
+          - security_zone_7
+          destination_network_objects:
+          - network_7
+          - network_group_2
+          - host_7
+          - network_group_4
+          - range_3
+          destination_port_objects:
+          - port_7
+          url_objects:
+          - url_group_1
+          - url_group_5
+          - url_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_122
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_5
+          - security_zone_6
+          - security_zone_1
+          destination_zones:
+          - security_zone_7
+          - security_zone_9
+          source_network_objects:
+          - network_group_8
+          - range_2
+          - range_1
+          - host_3
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_123
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - network_group_10
+          destination_network_objects:
+          - network_1
+          - network_3
+          destination_port_objects:
+          - port_1
+          - port_3
+          - port_group_1
+          - icmpv4_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_124
+          action: ALLOW
+          category: category_1_2
+          destination_network_objects:
+          - host_7
+          - network_group_6
+          - network_7
+          - host_9
+          - network_group_9
+          url_objects:
+          - url_3
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_125
+          action: ALLOW
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          - security_zone_6
+          - security_zone_4
+          destination_zones:
+          - security_zone_2
+          - security_zone_1
+          url_objects:
+          - url_group_5
+          - url_2
+          - url_7
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_126
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_zones:
+          - security_zone_9
+          source_network_objects:
+          - network_group_10
+          - network_7
+          - range_2
+          destination_network_objects:
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_127
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_network_objects:
+          - host_1
+          - network_group_7
+          - network_group_7
+          - network_1
+          - network_group_5
+          destination_network_objects:
+          - host_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_128
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_network_objects:
+          - host_1
+          - network_10
+          - network_5
+          - range_3
+          - host_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_129
+          action: ALLOW
+          category: category_1_2
+          source_zones:
+          - security_zone_1
+          source_network_objects:
+          - host_9
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_130
+          action: TRUST
+          category: category_1_2
+          url_objects:
+          - url_10
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_131
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          - security_zone_10
+          source_network_objects:
+          - range_1
+          - host_8
+          - network_group_7
+          - host_7
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_132
+          action: BLOCK_RESET
+          category: category_1_2
+          source_zones:
+          - security_zone_10
+          - security_zone_7
+          - security_zone_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_133
+          action: TRUST
+          category: category_1_2
+          source_network_objects:
+          - network_group_5
+          - range_4
+          - network_group_7
+          - network_group_3
+          - network_group_10
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_134
+          action: MONITOR
+          category: category_1_2
+          source_zones:
+          - security_zone_2
+          source_network_objects:
+          - range_2
+          - range_1
+          - network_group_9
+          - network_2
+          - network_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_135
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_network_objects:
+          - host_3
+          - range_4
+          - network_group_1
+          - network_group_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_136
+          action: TRUST
+          category: category_1_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_137
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - network_9
+          - network_6
+          - host_7
+          - network_group_4
+          destination_port_objects:
+          - icmpv4_2
+          - icmpv4_5
+          - port_3
+          - port_group_2
+          - port_2
+          url_objects:
+          - url_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_138
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_zones:
+          - security_zone_4
+          source_network_objects:
+          - range_4
+          - host_9
+          - network_group_3
+          - network_6
+          - network_group_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_139
+          action: BLOCK_RESET
+          category: category_1_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_140
+          action: BLOCK
+          category: category_1_2
+          destination_port_objects:
+          - icmpv4_2
+          url_objects:
+          - url_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_141
+          action: MONITOR
+          category: category_1_2
+          destination_port_objects:
+          - icmpv4_6
+          - port_group_1
+          - port_group_3
+          - port_5
+          - icmpv4_5
+          url_objects:
+          - url_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_142
+          action: ALLOW
+          category: category_1_2
+          destination_network_objects:
+          - host_9
+          - range_2
+          - network_group_2
+          - host_5
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_143
+          action: ALLOW
+          category: category_1_2
+          destination_port_objects:
+          - icmpv4_2
+          - port_10
+          url_objects:
+          - url_3
+          - url_group_3
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_144
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          source_zones:
+          - security_zone_1
+          - security_zone_9
+          source_network_objects:
+          - network_group_1
+          - network_8
+          - range_3
+          - network_group_2
+          - range_4
+          destination_port_objects:
+          - port_group_2
+          - port_group_3
+          - port_9
+          - icmpv4_5
+          - port_4
+          url_objects:
+          - url_group_4
+          - url_4
+          - url_group_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_145
+          action: ALLOW
+          category: category_1_2
+          source_zones:
+          - security_zone_6
+          destination_zones:
+          - security_zone_2
+          - security_zone_8
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_146
+          action: MONITOR
+          category: category_1_2
+          source_zones:
+          - security_zone_7
+          - security_zone_8
+          destination_network_objects:
+          - network_group_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_147
+          action: BLOCK_RESET
+          category: category_1_2
+          destination_network_objects:
+          - network_4
+          - network_group_6
+          - network_group_6
+          - network_group_5
+          - host_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_148
+          action: ALLOW
+          category: category_1_2
+          source_zones:
+          - security_zone_3
+          - security_zone_6
+          - security_zone_2
+          source_network_objects:
+          - network_group_2
+          - network_6
+          destination_network_objects:
+          - network_8
+          - network_group_6
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_149
+          action: BLOCK_INTERACTIVE
+          category: category_1_2
+          destination_zones:
+          - security_zone_1
+          - security_zone_8
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_150
+          action: BLOCK_RESET
+          category: category_1_2
+          source_network_objects:
+          - network_group_8
+          - host_7
+          - network_group_5
+          - host_3
+          - network_group_7
+          destination_port_objects:
+          - port_6
+          - icmpv4_5
+          - icmpv4_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_151
+          action: BLOCK_RESET
+          category: category_1_3
+          source_zones:
+          - security_zone_6
+          - security_zone_7
+          - security_zone_8
+          source_network_objects:
+          - network_group_4
+          - host_8
+          destination_network_objects:
+          - network_6
+          - network_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_152
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          url_objects:
+          - url_group_5
+          - url_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_153
+          action: TRUST
+          category: category_1_3
+          source_network_objects:
+          - network_group_5
+          - network_group_10
+          - range_2
+          - network_group_4
+          - host_9
+          destination_network_objects:
+          - host_10
+          - network_group_4
+          destination_port_objects:
+          - port_4
+          - icmpv4_6
+          - port_2
+          url_objects:
+          - url_group_2
+          - url_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_154
+          action: BLOCK
+          category: category_1_3
+          source_zones:
+          - security_zone_10
+          source_network_objects:
+          - host_6
+          - network_10
+          - network_2
+          - host_2
+          - network_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_155
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - network_group_8
+          - network_group_5
+          - range_2
+          - range_4
+          - network_group_3
+          destination_network_objects:
+          - host_4
+          - network_group_8
+          - host_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_156
+          action: ALLOW
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_157
+          action: BLOCK_RESET
+          category: category_1_3
+          source_network_objects:
+          - network_group_8
+          - network_group_2
+          url_objects:
+          - url_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_158
+          action: MONITOR
+          category: category_1_3
+          destination_port_objects:
+          - icmpv4_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_159
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_5
+          - security_zone_2
+          source_network_objects:
+          - network_group_1
+          url_objects:
+          - url_8
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_160
+          action: BLOCK
+          category: category_1_3
+          source_network_objects:
+          - network_group_6
+          - range_1
+          destination_port_objects:
+          - port_group_4
+          - port_7
+          - port_8
+          - port_4
+          - port_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_161
+          action: BLOCK
+          category: category_1_3
+          source_network_objects:
+          - host_9
+          - host_8
+          - network_group_10
+          destination_network_objects:
+          - host_1
+          - network_8
+          destination_port_objects:
+          - icmpv4_3
+          - icmpv4_4
+          - port_8
+          url_objects:
+          - url_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_162
+          action: TRUST
+          category: category_1_3
+          source_zones:
+          - security_zone_7
+          - security_zone_5
+          - security_zone_10
+          source_network_objects:
+          - range_3
+          destination_network_objects:
+          - network_group_10
+          - network_3
+          - network_group_7
+          url_objects:
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_163
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_164
+          action: BLOCK_RESET
+          category: category_1_3
+          source_network_objects:
+          - network_10
+          - network_group_6
+          - network_group_5
+          - network_group_10
+          - network_9
+          destination_network_objects:
+          - network_group_1
+          url_objects:
+          - url_8
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_165
+          action: ALLOW
+          category: category_1_3
+          source_network_objects:
+          - network_group_3
+          - network_group_7
+          - network_group_8
+          - network_group_1
+          destination_network_objects:
+          - network_group_5
+          - range_2
+          - network_group_2
+          - network_group_7
+          - network_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_166
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_5
+          destination_zones:
+          - security_zone_10
+          - security_zone_4
+          - security_zone_6
+          url_objects:
+          - url_8
+          - url_group_2
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_167
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_3
+          - security_zone_1
+          source_network_objects:
+          - network_10
+          - network_group_8
+          destination_port_objects:
+          - port_group_4
+          - port_10
+          - icmpv4_5
+          - port_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_168
+          action: MONITOR
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_169
+          action: TRUST
+          category: category_1_3
+          source_network_objects:
+          - network_10
+          - network_group_6
+          - host_7
+          - range_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_170
+          action: ALLOW
+          category: category_1_3
+          source_network_objects:
+          - network_7
+          - network_group_4
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_171
+          action: ALLOW
+          category: category_1_3
+          source_zones:
+          - security_zone_10
+          destination_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_group_1
+          - host_8
+          - network_group_2
+          - network_group_7
+          - network_group_5
+          destination_network_objects:
+          - network_group_8
+          - host_2
+          - range_4
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_172
+          action: BLOCK_RESET
+          category: category_1_3
+          source_network_objects:
+          - host_10
+          - host_7
+          - host_9
+          - network_9
+          - network_group_7
+          url_objects:
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_173
+          action: MONITOR
+          category: category_1_3
+          source_network_objects:
+          - network_group_4
+          - network_group_1
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_174
+          action: BLOCK_RESET
+          category: category_1_3
+          destination_zones:
+          - security_zone_6
+          - security_zone_9
+          destination_network_objects:
+          - network_group_7
+          - host_2
+          - network_group_5
+          - host_3
+          - network_group_1
+          url_objects:
+          - url_group_2
+          - url_9
+          - url_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_175
+          action: BLOCK
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_176
+          action: MONITOR
+          category: category_1_3
+          destination_zones:
+          - security_zone_10
+          source_network_objects:
+          - host_5
+          - network_1
+          - network_group_8
+          - range_4
+          - network_group_3
+          url_objects:
+          - url_8
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_177
+          action: BLOCK_RESET
+          category: category_1_3
+          source_zones:
+          - security_zone_4
+          destination_zones:
+          - security_zone_4
+          source_network_objects:
+          - host_9
+          - host_8
+          - network_7
+          - network_group_2
+          - network_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_178
+          action: ALLOW
+          category: category_1_3
+          source_network_objects:
+          - network_group_2
+          - host_1
+          - network_group_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_179
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_8
+          - security_zone_2
+          source_network_objects:
+          - network_3
+          - network_group_10
+          - network_group_5
+          - network_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_180
+          action: BLOCK_RESET
+          category: category_1_3
+          destination_zones:
+          - security_zone_7
+          - security_zone_6
+          - security_zone_10
+          source_network_objects:
+          - network_4
+          - network_group_6
+          - network_group_6
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_181
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - host_9
+          - network_group_10
+          - host_1
+          - range_3
+          destination_network_objects:
+          - network_group_8
+          - network_group_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_182
+          action: BLOCK
+          category: category_1_3
+          source_zones:
+          - security_zone_6
+          - security_zone_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_183
+          action: MONITOR
+          category: category_1_3
+          destination_zones:
+          - security_zone_8
+          - security_zone_9
+          source_network_objects:
+          - host_1
+          - host_2
+          - network_5
+          - host_5
+          - network_group_4
+          destination_port_objects:
+          - port_group_3
+          - icmpv4_6
+          - port_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_184
+          action: BLOCK
+          category: category_1_3
+          source_zones:
+          - security_zone_6
+          source_network_objects:
+          - network_group_5
+          - network_8
+          destination_network_objects:
+          - network_group_7
+          - range_1
+          - network_group_8
+          - host_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_185
+          action: BLOCK_RESET
+          category: category_1_3
+          source_zones:
+          - security_zone_4
+          - security_zone_3
+          - security_zone_5
+          destination_zones:
+          - security_zone_9
+          destination_network_objects:
+          - network_group_3
+          - network_group_10
+          - range_4
+          - host_5
+          - host_8
+          destination_port_objects:
+          - port_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_186
+          action: ALLOW
+          category: category_1_3
+          destination_network_objects:
+          - network_group_8
+          - network_group_10
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_187
+          action: MONITOR
+          category: category_1_3
+          source_network_objects:
+          - network_group_6
+          - network_group_5
+          - network_group_8
+          - network_2
+          destination_network_objects:
+          - host_8
+          - network_group_7
+          - network_group_9
+          - network_9
+          - network_group_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_188
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_2
+          - security_zone_10
+          - security_zone_7
+          destination_network_objects:
+          - network_group_3
+          - network_group_6
+          - network_group_2
+          - network_1
+          - network_3
+          url_objects:
+          - url_9
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_189
+          action: TRUST
+          category: category_1_3
+          destination_network_objects:
+          - network_group_6
+          - network_group_9
+          destination_port_objects:
+          - port_group_5
+          - port_group_1
+          - port_7
+          - icmpv4_3
+          - icmpv4_2
+          url_objects:
+          - url_group_2
+          - url_10
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_190
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - network_group_10
+          - network_3
+          - range_2
+          - host_8
+          - network_10
+          destination_network_objects:
+          - network_3
+          - network_group_2
+          destination_port_objects:
+          - icmpv4_2
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_191
+          action: MONITOR
+          category: category_1_3
+          destination_zones:
+          - security_zone_10
+          - security_zone_8
+          - security_zone_4
+          destination_port_objects:
+          - icmpv4_2
+          - icmpv4_5
+          - port_group_5
+          - port_8
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_192
+          action: BLOCK
+          category: category_1_3
+          source_network_objects:
+          - host_2
+          - network_group_4
+          - network_6
+          destination_network_objects:
+          - network_group_1
+          - network_group_5
+          - host_10
+          url_objects:
+          - url_7
+          - url_group_3
+          - url_2
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_193
+          action: BLOCK_RESET
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_194
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_network_objects:
+          - range_1
+          - network_group_3
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_195
+          action: ALLOW
+          category: category_1_3
+          source_zones:
+          - security_zone_3
+          destination_zones:
+          - security_zone_8
+          - security_zone_5
+          source_network_objects:
+          - network_group_5
+          - range_2
+          - network_group_10
+          destination_network_objects:
+          - host_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_196
+          action: TRUST
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_197
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_zones:
+          - security_zone_9
+          source_network_objects:
+          - host_4
+          - network_group_4
+          - network_group_2
+          destination_network_objects:
+          - network_group_3
+          - host_3
+          - network_group_10
+          - host_7
+          - network_2
+          destination_port_objects:
+          - port_5
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_198
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_5
+          - security_zone_2
+          - security_zone_9
+          destination_zones:
+          - security_zone_1
+          source_network_objects:
+          - network_group_5
+          - network_group_10
+          - network_group_3
+          - network_group_9
+          - network_group_5
+          destination_port_objects:
+          - port_2
+          - port_3
+          - port_group_1
+          - port_1
+          url_objects:
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_199
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_zones:
+          - security_zone_1
+          - security_zone_7
+          source_network_objects:
+          - network_3
+          - network_group_5
+          - network_group_1
+          destination_network_objects:
+          - host_9
+          - host_7
+          - network_group_3
+          - network_group_6
+          - network_group_2
+          url_objects:
+          - url_group_5
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_200
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_201
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_9
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_202
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_port_objects:
+          - port_group_2
+          - icmpv4_5
+          - port_2
+          - port_group_1
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_203
+          action: BLOCK
+          category: category_1_3
+          source_zones:
+          - security_zone_5
+          - security_zone_9
+          source_network_objects:
+          - network_group_1
+          - range_1
+          - network_1
+          destination_network_objects:
+          - network_10
+          - network_group_1
+          - network_5
+          destination_port_objects:
+          - icmpv4_2
+          - port_10
+          - port_8
+          - port_5
+          url_objects:
+          - url_9
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_204
+          action: TRUST
+          category: category_1_3
+          source_zones:
+          - security_zone_4
+          - security_zone_7
+          - security_zone_6
+          source_network_objects:
+          - network_10
+          - network_group_1
+          destination_port_objects:
+          - port_group_5
+          - port_6
+          - icmpv4_3
+          - icmpv4_5
+          - port_group_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_205
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - network_group_7
+          - network_group_1
+          - network_7
+          - range_2
+          - host_10
+          destination_port_objects:
+          - port_1
+          - port_group_5
+          - port_3
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_206
+          action: BLOCK_RESET
+          category: category_1_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_207
+          action: MONITOR
+          category: category_1_3
+          source_zones:
+          - security_zone_6
+          - security_zone_2
+          source_network_objects:
+          - network_group_2
+          - host_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_208
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_network_objects:
+          - network_6
+          - network_group_7
+          - host_1
+          url_objects:
+          - url_2
+          - url_7
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_209
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_1
+          - security_zone_7
+          - security_zone_6
+          destination_network_objects:
+          - range_4
+          - host_9
+          destination_port_objects:
+          - icmpv4_3
+          - icmpv4_1
+          - port_group_4
+          url_objects:
+          - url_9
+          - url_1
+          - url_group_1
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_210
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          destination_network_objects:
+          - network_group_7
+          - host_5
+          - network_5
+          - network_group_3
+          destination_port_objects:
+          - port_1
+          - port_2
+          - port_10
+          - port_7
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_211
+          action: TRUST
+          category: category_1_3
+          destination_zones:
+          - security_zone_7
+          url_objects:
+          - url_group_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_212
+          action: MONITOR
+          category: category_1_3
+          destination_network_objects:
+          - network_group_10
+          - host_6
+          - network_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_213
+          action: BLOCK
+          category: category_1_3
+          source_network_objects:
+          - network_10
+          - network_group_7
+          - host_9
+          - network_group_8
+          - network_group_4
+          destination_network_objects:
+          - network_group_5
+          - range_1
+          - network_group_2
+          - host_8
+          destination_port_objects:
+          - port_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_214
+          action: BLOCK_RESET
+          category: category_1_3
+          destination_zones:
+          - security_zone_8
+          source_network_objects:
+          - network_5
+          - network_group_2
+          - host_4
+          destination_network_objects:
+          - network_group_7
+          - network_group_1
+          - host_5
+          - host_10
+          - network_group_2
+          destination_port_objects:
+          - icmpv4_3
+          - port_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_215
+          action: BLOCK
+          category: category_1_3
+          source_zones:
+          - security_zone_2
+          - security_zone_8
+          url_objects:
+          - url_5
+          - url_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_216
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_8
+          - security_zone_7
+          destination_network_objects:
+          - network_7
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_217
+          action: ALLOW
+          category: category_1_3
+          destination_zones:
+          - security_zone_7
+          source_network_objects:
+          - network_1
+          - network_group_6
+          - host_3
+          destination_network_objects:
+          - network_group_4
+          - network_group_9
+          - network_group_3
+          - network_group_5
+          - host_1
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_218
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - network_group_1
+          - network_group_1
+          - network_group_5
+          - host_8
+          - host_9
+          destination_port_objects:
+          - port_group_4
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_219
+          action: MONITOR
+          category: category_1_3
+          source_network_objects:
+          - host_10
+          destination_port_objects:
+          - icmpv4_1
+          - port_group_3
+          - port_5
+          - port_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_220
+          action: BLOCK_RESET
+          category: category_1_3
+          source_zones:
+          - security_zone_5
+          - security_zone_9
+          - security_zone_4
+          destination_zones:
+          - security_zone_9
+          source_network_objects:
+          - network_group_2
+          - network_7
+          - network_group_7
+          - network_group_10
+          destination_port_objects:
+          - port_group_4
+          url_objects:
+          - url_group_5
+          - url_group_2
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_221
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_zones:
+          - security_zone_3
+          destination_port_objects:
+          - port_2
+          - icmpv4_6
+          - port_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_222
+          action: BLOCK_INTERACTIVE
+          category: category_1_3
+          source_network_objects:
+          - host_10
+          - network_8
+          - network_10
+          - host_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_223
+          action: TRUST
+          category: category_1_3
+          destination_network_objects:
+          - host_10
+          - network_group_8
+          destination_port_objects:
+          - port_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_224
+          action: BLOCK_RESET
+          category: category_1_3
+          source_network_objects:
+          - network_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_225
+          action: BLOCK
+          category: category_1_3
+          destination_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_6
+          - host_1
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_226
+          action: BLOCK
+          category: category_1_4
+          source_zones:
+          - security_zone_7
+          - security_zone_2
+          destination_zones:
+          - security_zone_5
+          url_objects:
+          - url_4
+          - url_3
+          - url_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_227
+          action: BLOCK_RESET
+          category: category_1_4
+          source_zones:
+          - security_zone_10
+          destination_zones:
+          - security_zone_1
+          - security_zone_7
+          url_objects:
+          - url_4
+          - url_6
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_228
+          action: TRUST
+          category: category_1_4
+          destination_port_objects:
+          - icmpv4_5
+          - icmpv4_2
+          - port_10
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_229
+          action: BLOCK_RESET
+          category: category_1_4
+          source_network_objects:
+          - network_group_4
+          - network_6
+          - network_group_9
+          destination_network_objects:
+          - network_group_3
+          - network_7
+          - network_6
+          - network_9
+          url_objects:
+          - url_group_2
+          - url_2
+          - url_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_230
+          action: BLOCK
+          category: category_1_4
+          destination_port_objects:
+          - port_group_2
+          - port_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_231
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_5
+          - security_zone_6
+          source_network_objects:
+          - host_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_232
+          action: TRUST
+          category: category_1_4
+          url_objects:
+          - url_9
+          - url_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_233
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_zones:
+          - security_zone_8
+          - security_zone_4
+          source_network_objects:
+          - range_2
+          - network_group_5
+          - network_group_9
+          - network_group_5
+          destination_port_objects:
+          - port_group_2
+          - port_8
+          - port_10
+          - icmpv4_3
+          url_objects:
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_234
+          action: ALLOW
+          category: category_1_4
+          source_zones:
+          - security_zone_4
+          - security_zone_5
+          url_objects:
+          - url_7
+          - url_1
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_235
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          destination_zones:
+          - security_zone_5
+          url_objects:
+          - url_3
+          - url_group_4
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_236
+          action: BLOCK
+          category: category_1_4
+          source_zones:
+          - security_zone_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_237
+          action: TRUST
+          category: category_1_4
+          source_network_objects:
+          - host_3
+          - network_group_8
+          - network_group_10
+          - network_group_4
+          - host_7
+          destination_network_objects:
+          - network_group_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_238
+          action: TRUST
+          category: category_1_4
+          source_network_objects:
+          - network_group_9
+          - range_3
+          destination_port_objects:
+          - port_10
+          - icmpv4_4
+          - port_8
+          - port_group_4
+          url_objects:
+          - url_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_239
+          action: BLOCK_RESET
+          category: category_1_4
+          source_zones:
+          - security_zone_8
+          - security_zone_2
+          destination_zones:
+          - security_zone_9
+          - security_zone_7
+          source_network_objects:
+          - range_3
+          - range_1
+          - host_5
+          - network_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_240
+          action: TRUST
+          category: category_1_4
+          source_network_objects:
+          - network_7
+          - network_group_8
+          destination_port_objects:
+          - port_group_5
+          url_objects:
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_241
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_network_objects:
+          - host_6
+          - network_group_5
+          - host_10
+          - network_1
+          - network_group_1
+          url_objects:
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_242
+          action: BLOCK_RESET
+          category: category_1_4
+          source_network_objects:
+          - network_group_8
+          - network_group_3
+          - host_9
+          - network_10
+          destination_port_objects:
+          - port_8
+          - port_group_5
+          - icmpv4_5
+          - icmpv4_2
+          url_objects:
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_243
+          action: BLOCK_RESET
+          category: category_1_4
+          source_zones:
+          - security_zone_3
+          - security_zone_8
+          destination_zones:
+          - security_zone_5
+          - security_zone_8
+          source_network_objects:
+          - host_8
+          - network_group_4
+          destination_network_objects:
+          - network_group_1
+          - network_group_6
+          - range_4
+          - host_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_244
+          action: TRUST
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - range_2
+          - network_3
+          destination_network_objects:
+          - host_9
+          - host_2
+          - network_group_2
+          - network_group_9
+          destination_port_objects:
+          - port_4
+          - port_8
+          - icmpv4_6
+          url_objects:
+          - url_group_1
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_245
+          action: MONITOR
+          category: category_1_4
+          source_zones:
+          - security_zone_5
+          - security_zone_3
+          destination_zones:
+          - security_zone_9
+          - security_zone_5
+          source_network_objects:
+          - network_group_9
+          destination_port_objects:
+          - port_5
+          - port_10
+          - port_group_2
+          - port_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_246
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_3
+          - security_zone_5
+          - security_zone_7
+          source_network_objects:
+          - network_9
+          - network_group_9
+          destination_port_objects:
+          - port_group_5
+          - port_6
+          - icmpv4_1
+          - icmpv4_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_247
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          destination_zones:
+          - security_zone_1
+          source_network_objects:
+          - network_4
+          - network_group_9
+          - network_group_3
+          destination_network_objects:
+          - range_2
+          - network_2
+          - network_group_8
+          - host_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_248
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          url_objects:
+          - url_1
+          - url_6
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_249
+          action: BLOCK_RESET
+          category: category_1_4
+          url_objects:
+          - url_3
+          - url_10
+          - url_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_250
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - network_group_6
+          - host_1
+          - network_group_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_251
+          action: ALLOW
+          category: category_1_4
+          destination_zones:
+          - security_zone_2
+          - security_zone_5
+          source_network_objects:
+          - network_group_8
+          destination_network_objects:
+          - network_2
+          - host_8
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_252
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_253
+          action: BLOCK
+          category: category_1_4
+          source_zones:
+          - security_zone_8
+          destination_zones:
+          - security_zone_4
+          - security_zone_7
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_254
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          destination_network_objects:
+          - network_9
+          - host_3
+          - network_3
+          - range_3
+          - network_group_5
+          intrusion_policy: intrusion_policy_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_255
+          action: ALLOW
+          category: category_1_4
+          source_zones:
+          - security_zone_4
+          destination_zones:
+          - security_zone_8
+          - security_zone_9
+          - security_zone_2
+          destination_network_objects:
+          - network_10
+          - network_6
+          - network_7
+          - host_3
+          destination_port_objects:
+          - port_2
+          - port_group_1
+          - port_6
+          - icmpv4_3
+          url_objects:
+          - url_9
+          - url_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_256
+          action: ALLOW
+          category: category_1_4
+          destination_zones:
+          - security_zone_8
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_257
+          action: ALLOW
+          category: category_1_4
+          source_network_objects:
+          - host_7
+          - network_group_5
+          - network_group_8
+          - host_2
+          destination_port_objects:
+          - port_group_1
+          - icmpv4_6
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_258
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_10
+          - network_group_9
+          - network_group_1
+          - host_5
+          destination_network_objects:
+          - network_10
+          - network_group_5
+          - network_group_2
+          url_objects:
+          - url_1
+          - url_9
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_259
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - range_2
+          - network_4
+          - host_1
+          - range_1
+          - network_group_4
+          url_objects:
+          - url_10
+          - url_9
+          - url_group_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_260
+          action: BLOCK_RESET
+          category: category_1_4
+          destination_zones:
+          - security_zone_6
+          - security_zone_10
+          destination_network_objects:
+          - range_3
+          - network_group_3
+          - network_group_6
+          url_objects:
+          - url_10
+          - url_2
+          - url_group_3
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_261
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          destination_zones:
+          - security_zone_1
+          - security_zone_3
+          - security_zone_2
+          source_network_objects:
+          - network_group_9
+          - network_group_5
+          - host_2
+          - range_4
+          - network_group_10
+          url_objects:
+          - url_group_5
+          - url_5
+          - url_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_262
+          action: ALLOW
+          category: category_1_4
+          source_zones:
+          - security_zone_4
+          - security_zone_7
+          url_objects:
+          - url_group_5
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_263
+          action: BLOCK_RESET
+          category: category_1_4
+          destination_zones:
+          - security_zone_3
+          - security_zone_7
+          - security_zone_8
+          source_network_objects:
+          - network_group_10
+          - network_group_2
+          - host_4
+          - network_group_3
+          - range_4
+          url_objects:
+          - url_9
+          - url_group_2
+          - url_group_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_264
+          action: BLOCK
+          category: category_1_4
+          source_network_objects:
+          - network_group_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_265
+          action: BLOCK
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - network_group_3
+          - network_8
+          - network_group_9
+          url_objects:
+          - url_group_1
+          - url_group_4
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_266
+          action: BLOCK_RESET
+          category: category_1_4
+          destination_zones:
+          - security_zone_5
+          destination_port_objects:
+          - icmpv4_1
+          - icmpv4_4
+          - port_4
+          - port_10
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_267
+          action: MONITOR
+          category: category_1_4
+          source_zones:
+          - security_zone_8
+          destination_network_objects:
+          - network_7
+          - host_4
+          - network_group_1
+          - network_group_3
+          - network_group_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_268
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_4
+          - security_zone_1
+          - security_zone_9
+          source_network_objects:
+          - host_7
+          - network_8
+          - range_3
+          - host_6
+          destination_port_objects:
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_269
+          action: ALLOW
+          category: category_1_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_270
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          destination_network_objects:
+          - network_group_10
+          - network_4
+          - network_group_5
+          - host_10
+          - network_group_6
+          destination_port_objects:
+          - port_7
+          - icmpv4_6
+          - port_2
+          - port_8
+          - icmpv4_1
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_271
+          action: BLOCK
+          category: category_1_4
+          source_zones:
+          - security_zone_6
+          - security_zone_8
+          source_network_objects:
+          - network_group_7
+          - network_2
+          - network_group_5
+          - host_4
+          - network_6
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_272
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_zones:
+          - security_zone_1
+          - security_zone_10
+          destination_network_objects:
+          - host_8
+          - network_group_6
+          - network_group_2
+          - network_1
+          destination_port_objects:
+          - port_2
+          - icmpv4_3
+          - port_group_2
+          - port_10
+          url_objects:
+          - url_6
+          - url_7
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_273
+          action: MONITOR
+          category: category_1_4
+          source_zones:
+          - security_zone_1
+          - security_zone_3
+          - security_zone_10
+          source_network_objects:
+          - network_5
+          - host_4
+          destination_network_objects:
+          - host_2
+          - network_group_3
+          - network_group_9
+          destination_port_objects:
+          - port_group_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_274
+          action: BLOCK_RESET
+          category: category_1_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_275
+          action: ALLOW
+          category: category_1_4
+          destination_zones:
+          - security_zone_6
+          - security_zone_10
+          - security_zone_5
+          source_network_objects:
+          - network_group_5
+          destination_network_objects:
+          - network_group_10
+          - network_group_8
+          - network_5
+          url_objects:
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_276
+          action: BLOCK
+          category: category_1_4
+          destination_network_objects:
+          - network_group_2
+          url_objects:
+          - url_group_2
+          - url_group_1
+          - url_9
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_277
+          action: ALLOW
+          category: category_1_4
+          source_network_objects:
+          - network_group_2
+          - network_8
+          - range_4
+          destination_network_objects:
+          - host_8
+          - network_9
+          - network_6
+          destination_port_objects:
+          - icmpv4_1
+          - port_10
+          - port_group_1
+          - port_group_3
+          intrusion_policy: intrusion_policy_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_278
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - host_5
+          - network_group_5
+          - host_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_279
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_group_1
+          - network_1
+          url_objects:
+          - url_4
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_280
+          action: TRUST
+          category: category_1_4
+          source_zones:
+          - security_zone_1
+          - security_zone_8
+          - security_zone_9
+          destination_port_objects:
+          - port_5
+          - icmpv4_6
+          - port_6
+          - port_10
+          - port_2
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_281
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - range_3
+          destination_network_objects:
+          - network_group_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_282
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_network_objects:
+          - host_10
+          - host_2
+          - network_group_9
+          destination_network_objects:
+          - network_group_8
+          - network_4
+          - network_group_7
+          destination_port_objects:
+          - port_group_4
+          url_objects:
+          - url_group_4
+          - url_8
+          - url_group_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_283
+          action: BLOCK_RESET
+          category: category_1_4
+          source_network_objects:
+          - network_group_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_284
+          action: MONITOR
+          category: category_1_4
+          destination_zones:
+          - security_zone_6
+          - security_zone_4
+          source_network_objects:
+          - network_2
+          url_objects:
+          - url_1
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_285
+          action: TRUST
+          category: category_1_4
+          destination_network_objects:
+          - network_group_5
+          - network_group_1
+          - network_group_7
+          - network_group_8
+          destination_port_objects:
+          - icmpv4_2
+          url_objects:
+          - url_group_1
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_286
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          url_objects:
+          - url_5
+          - url_2
+          - url_group_4
+          intrusion_policy: intrusion_policy_1
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_287
+          action: BLOCK_RESET
+          category: category_1_4
+          destination_port_objects:
+          - port_10
+          - port_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_288
+          action: BLOCK
+          category: category_1_4
+          destination_port_objects:
+          - icmpv4_4
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_289
+          action: BLOCK_RESET
+          category: category_1_4
+          destination_zones:
+          - security_zone_8
+          - security_zone_9
+          - security_zone_6
+          destination_network_objects:
+          - range_2
+          url_objects:
+          - url_8
+          send_events_to_fmc: true
+          log_connection_end: false
+          log_connection_begin: true
+        - name: rule_1_290
+          action: ALLOW
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - network_group_5
+          - network_group_1
+          destination_network_objects:
+          - network_group_9
+          - network_group_1
+          - network_1
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_291
+          action: ALLOW
+          category: category_1_4
+          destination_port_objects:
+          - icmpv4_5
+          - port_8
+          url_objects:
+          - url_4
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_292
+          action: MONITOR
+          category: category_1_4
+          source_zones:
+          - security_zone_3
+          source_network_objects:
+          - network_group_4
+          destination_network_objects:
+          - network_8
+          - network_1
+          - network_group_9
+          url_objects:
+          - url_4
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_293
+          action: MONITOR
+          category: category_1_4
+          source_zones:
+          - security_zone_1
+          - security_zone_5
+          - security_zone_3
+          destination_port_objects:
+          - icmpv4_4
+          - port_5
+          - port_group_1
+          - icmpv4_6
+          - icmpv4_2
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_294
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - network_group_5
+          - network_group_6
+          - host_2
+          destination_port_objects:
+          - port_group_3
+          - port_8
+          - icmpv4_3
+          url_objects:
+          - url_2
+          - url_10
+          - url_group_3
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_295
+          action: TRUST
+          category: category_1_4
+          source_zones:
+          - security_zone_4
+          - security_zone_1
+          - security_zone_2
+          url_objects:
+          - url_5
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_296
+          action: TRUST
+          category: category_1_4
+          source_network_objects:
+          - network_group_10
+          - network_group_10
+          destination_port_objects:
+          - port_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_297
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - range_1
+          - network_group_9
+          - network_3
+          - network_group_5
+          destination_network_objects:
+          - host_3
+          - host_2
+          - range_1
+          destination_port_objects:
+          - port_8
+          - port_6
+          - port_9
+          url_objects:
+          - url_6
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true
+        - name: rule_1_298
+          action: ALLOW
+          category: category_1_4
+          destination_zones:
+          - security_zone_8
+          - security_zone_9
+          - security_zone_1
+          source_network_objects:
+          - host_3
+          url_objects:
+          - url_group_2
+          - url_3
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: false
+        - name: rule_1_299
+          action: BLOCK_INTERACTIVE
+          category: category_1_4
+          source_zones:
+          - security_zone_4
+          - security_zone_7
+          destination_zones:
+          - security_zone_4
+          source_network_objects:
+          - host_6
+          - network_group_1
+          - network_4
+          destination_network_objects:
+          - host_4
+          - network_9
+          send_events_to_fmc: true
+          log_connection_begin: true
+          log_connection_end: true
+        - name: rule_1_300
+          action: MONITOR
+          category: category_1_4
+          source_network_objects:
+          - network_1
+          - network_group_8
+          - network_4
+          - network_10
+          destination_network_objects:
+          - network_group_2
+          - network_group_2
+          - host_4
+          - network_group_5
+          - network_9
+          send_events_to_fmc: true
+          log_connection_begin: false
+          log_connection_end: true

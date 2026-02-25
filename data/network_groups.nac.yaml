@@ -5,245 +5,61 @@ fmc:
       network_groups:
       - name: network_group_1
         objects:
-        - network_14
-        - network_45
-        - host_23
-        - network_46
+        - host_2
+        - network_7
+        - network_6
+        - range_2
       - name: network_group_2
         objects:
-        - network_25
-        - network_2
-        - range_2
-        - network_33
-        - host_26
+        - network_group_1
+        - host_1
+        - host_7
+        - host_5
+        - network_10
       - name: network_group_3
         objects:
-        - network_14
-        - host_32
-        - range_2
-        - host_21
+        - network_8
+        - network_4
+        - host_3
+        - host_6
+        - range_3
       - name: network_group_4
         objects:
-        - network_group_3
-        - network_49
-        - host_18
+        - network_4
+        - network_8
+        - range_2
+        - host_9
+        - host_4
       - name: network_group_5
         objects:
-        - host_20
-        - range_10
-        - network_34
-        - host_34
-        - range_17
+        - network_1
+        - network_6
+        - range_3
       - name: network_group_6
         objects:
-        - network_26
-        - host_36
+        - network_3
         - network_8
-        - network_29
-        - network_24
+        - network_group_4
+        - host_9
       - name: network_group_7
         objects:
-        - host_34
-        - host_19
-        - host_1
+        - range_3
+        - host_8
+        - host_9
       - name: network_group_8
         objects:
-        - network_32
-        - network_50
-        - network_16
+        - network_5
+        - host_1
+        - range_2
       - name: network_group_9
         objects:
-        - host_27
-        - host_44
-        - network_40
-        - network_15
+        - host_1
+        - network_7
+        - range_2
+        - host_4
       - name: network_group_10
         objects:
-        - host_7
-        - network_13
-        - network_32
-        - network_group_8
-        - network_15
-      - name: network_group_11
-        objects:
-        - host_10
-        - host_46
-        - network_3
-      - name: network_group_12
-        objects:
-        - host_7
-        - network_48
-        - network_group_7
-      - name: network_group_13
-        objects:
-        - host_3
-        - host_39
-        - host_5
-        - network_47
-        - network_8
-      - name: network_group_14
-        objects:
-        - network_47
-        - range_1
-        - network_group_3
-        - network_12
-        - host_46
-      - name: network_group_15
-        objects:
-        - range_11
-        - host_45
-        - host_1
-        - network_49
-      - name: network_group_16
-        objects:
-        - range_19
-        - host_19
-        - network_2
-      - name: network_group_17
-        objects:
-        - host_35
-        - network_22
-        - host_44
-        - range_18
-      - name: network_group_18
-        objects:
-        - network_group_9
         - host_2
-        - network_35
-        - host_25
-      - name: network_group_19
-        objects:
-        - network_21
-        - network_25
-        - network_group_15
-        - network_13
-        - host_5
-      - name: network_group_20
-        objects:
-        - host_16
-        - host_10
-        - network_group_14
-        - network_30
-      - name: network_group_21
-        objects:
-        - network_20
-        - host_20
-        - host_38
-        - network_18
-        - host_36
-      - name: network_group_22
-        objects:
-        - network_17
-        - network_22
-        - network_10
-      - name: network_group_23
-        objects:
-        - host_17
-        - network_32
-        - range_19
-        - network_group_5
-      - name: network_group_24
-        objects:
-        - host_1
-        - host_13
-        - range_2
-        - host_31
-      - name: network_group_25
-        objects:
-        - network_5
-        - host_22
-        - host_37
-      - name: network_group_26
-        objects:
-        - network_46
-        - range_9
-        - network_group_9
-      - name: network_group_27
-        objects:
-        - network_31
-        - network_2
-        - network_39
-        - host_32
-      - name: network_group_28
-        objects:
-        - host_19
-        - network_group_2
-        - network_group_18
-      - name: network_group_29
-        objects:
-        - network_29
-        - network_group_19
-        - host_14
-        - network_23
-        - network_group_28
-      - name: network_group_30
-        objects:
-        - network_16
-        - range_10
-        - network_42
-        - network_38
-        - network_group_14
-      - name: network_group_31
-        objects:
-        - network_26
-        - host_28
-        - host_20
-      - name: network_group_32
-        objects:
-        - host_5
-        - network_42
-        - network_group_28
-        - network_group_13
-      - name: network_group_33
-        objects:
-        - host_21
-        - range_15
         - network_7
-        - network_group_10
-        - host_4
-      - name: network_group_34
-        objects:
-        - host_6
-        - network_group_31
-        - range_9
-        - network_10
-      - name: network_group_35
-        objects:
-        - host_21
-        - network_46
-        - host_2
-        - network_group_17
-        - range_8
-      - name: network_group_36
-        objects:
-        - host_2
-        - host_45
-        - host_31
-        - network_group_23
-        - network_50
-      - name: network_group_37
-        objects:
-        - network_group_26
-        - host_17
-        - network_35
-        - network_group_23
-        - range_3
-      - name: network_group_38
-        objects:
-        - host_35
-        - network_24
-        - host_49
-        - network_46
-        - host_1
-      - name: network_group_39
-        objects:
-        - network_group_7
-        - host_20
-        - network_30
-        - network_group_1
-        - range_8
-      - name: network_group_40
-        objects:
-        - range_6
-        - network_48
-        - network_8
+        - network_1
+        - network_group_9

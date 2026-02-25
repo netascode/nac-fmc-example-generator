@@ -4,42 +4,10 @@ fmc:
     objects:
       ranges:
       - name: range_1
-        ip_range: 10.44.161.161-10.161.0.9
+        ip_range: 10.1.198.18-10.221.124.227
       - name: range_2
-        ip_range: 10.166.153.136-10.178.69.185
+        ip_range: 10.14.233.105-10.69.84.88
       - name: range_3
-        ip_range: 10.115.208.100-10.198.101.216
+        ip_range: 10.88.157.128-10.249.132.128
       - name: range_4
-        ip_range: 10.69.148.124-10.71.35.245
-      - name: range_5
-        ip_range: 10.4.199.204-10.59.113.47
-      - name: range_6
-        ip_range: 10.20.168.229-10.76.108.71
-      - name: range_7
-        ip_range: 10.55.52.219-10.149.186.69
-      - name: range_8
-        ip_range: 10.131.171.145-10.152.112.64
-      - name: range_9
-        ip_range: 10.189.247.108-10.234.126.199
-      - name: range_10
-        ip_range: 10.16.158.42-10.115.33.244
-      - name: range_11
-        ip_range: 10.170.109.107-10.250.19.13
-      - name: range_12
-        ip_range: 10.39.115.100-10.255.84.13
-      - name: range_13
-        ip_range: 10.84.3.27-10.89.34.100
-      - name: range_14
-        ip_range: 10.127.130.178-10.186.42.15
-      - name: range_15
-        ip_range: 10.119.123.182-10.149.84.56
-      - name: range_16
-        ip_range: 10.29.112.82-10.90.205.61
-      - name: range_17
-        ip_range: 10.135.150.7-10.194.247.109
-      - name: range_18
-        ip_range: 10.25.250.20-10.208.222.240
-      - name: range_19
-        ip_range: 10.152.217.71-10.243.175.78
-      - name: range_20
-        ip_range: 10.144.203.51-10.255.233.244
+        ip_range: 10.113.195.144-10.192.141.81

@@ -4,136 +4,28 @@ fmc:
     objects:
       ports:
       - name: port_1
-        protocol: TCP
-        port: 54521
+        protocol: ESP
       - name: port_2
-        protocol: UDP
-        port: 5501-5580
+        protocol: ESP
       - name: port_3
         protocol: UDP
-        port: 58372
+        port: 10989-11019
       - name: port_4
         protocol: UDP
-        port: 53519-53591
+        port: 60235
       - name: port_5
         protocol: UDP
-        port: 53053-53139
+        port: 2934
       - name: port_6
-        protocol: UDP
-        port: 10681-10747
+        protocol: TCP
+        port: 48074
       - name: port_7
         protocol: ESP
       - name: port_8
-        protocol: TCP
-        port: 39500
+        protocol: ESP
       - name: port_9
         protocol: UDP
-        port: 21310-21369
+        port: 21038-21068
       - name: port_10
         protocol: UDP
-        port: 4231-4237
-      - name: port_11
-        protocol: ESP
-      - name: port_12
-        protocol: UDP
-        port: 25431-25450
-      - name: port_13
-        protocol: UDP
-        port: 21638-21687
-      - name: port_14
-        protocol: ESP
-      - name: port_15
-        protocol: TCP
-        port: 46027-46076
-      - name: port_16
-        protocol: TCP
-        port: 1429
-      - name: port_17
-        protocol: ESP
-      - name: port_18
-        protocol: ESP
-      - name: port_19
-        protocol: ESP
-      - name: port_20
-        protocol: UDP
-        port: 22271
-      - name: port_21
-        protocol: UDP
-        port: 20746-20749
-      - name: port_22
-        protocol: UDP
-        port: 27552-27647
-      - name: port_23
-        protocol: UDP
-        port: 13973-13975
-      - name: port_24
-        protocol: ESP
-      - name: port_25
-        protocol: TCP
-        port: 26780
-      - name: port_26
-        protocol: ESP
-      - name: port_27
-        protocol: UDP
-        port: 9730
-      - name: port_28
-        protocol: UDP
-        port: 49984
-      - name: port_29
-        protocol: TCP
-        port: 27741
-      - name: port_30
-        protocol: TCP
-        port: 58552-58562
-      - name: port_31
-        protocol: UDP
-        port: 39441
-      - name: port_32
-        protocol: ESP
-      - name: port_33
-        protocol: TCP
-        port: 45191-45242
-      - name: port_34
-        protocol: UDP
-        port: 4991
-      - name: port_35
-        protocol: TCP
-        port: 58088
-      - name: port_36
-        protocol: UDP
-        port: 7212
-      - name: port_37
-        protocol: ESP
-      - name: port_38
-        protocol: ESP
-      - name: port_39
-        protocol: TCP
-        port: 39370-39395
-      - name: port_40
-        protocol: ESP
-      - name: port_41
-        protocol: UDP
-        port: 26144
-      - name: port_42
-        protocol: UDP
-        port: 32532-32594
-      - name: port_43
-        protocol: TCP
-        port: 33029
-      - name: port_44
-        protocol: ESP
-      - name: port_45
-        protocol: TCP
-        port: 31974-32067
-      - name: port_46
-        protocol: ESP
-      - name: port_47
-        protocol: ESP
-      - name: port_48
-        protocol: ESP
-      - name: port_49
-        protocol: UDP
-        port: 18292
-      - name: port_50
-        protocol: UDP
-        port: 34465
+        port: 58468
