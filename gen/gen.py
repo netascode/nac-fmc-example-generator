@@ -133,15 +133,17 @@ def main():
             available_port_objects.extend([pg['name'] for pg in port_groups])
 
     # Generate network groups (must be after all other objects)
-    if 'network_groups_number' in settings and len(available_objects) > 0:
+    if 'network_groups_number' in settings:
         network_groups_number = settings['network_groups_number']
         if network_groups_number > 0:
+            network_groups_reuse = settings.get('network_groups_reuse', False)
             print(f"Generating {network_groups_number} network group(s)...")
-            network_groups = generate_network_groups(network_groups_number, available_objects)
+            network_groups = generate_network_groups(network_groups_number, available_objects, network_groups_reuse)
             fmc_data = create_fmc_structure('network_groups', network_groups)
             write_output(fmc_data, 'network_groups.nac.yaml')
-            # Add network group names to available objects
-            available_objects.extend([ng['name'] for ng in network_groups])
+            # Add network group names to available objects (only if reuse is enabled)
+            if network_groups_reuse:
+                available_objects.extend([ng['name'] for ng in network_groups])
 
     # Generate URL groups (must be after URLs)
     if 'url_groups_number' in settings and len(available_url_objects) > 0:

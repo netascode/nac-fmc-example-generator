@@ -7,6 +7,7 @@ settings:
   - security_zones_number: 10
   - port_groups_number: 5
   - network_groups_number: 10
+  - network_groups_reuse: true # whether network groups can reference other network groups as objects
   - urls_number: 10
   - url_groups_number: 5
   - intrusion_policies_number: 3

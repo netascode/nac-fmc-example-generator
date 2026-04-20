@@ -5,61 +5,111 @@ fmc:
       network_groups:
       - name: network_group_1
         objects:
-        - host_2
-        - network_7
-        - network_6
-        - range_2
+        - network_8
+        - network_10
+        - host_4
+        - network_1
+        literals:
+        - 10.140.168.33
+        - 10.103.92.210
+        - 10.210.3.36
+        - 10.214.72.0/21
       - name: network_group_2
         objects:
-        - network_group_1
-        - host_1
         - host_7
-        - host_5
-        - network_10
+        - range_2
+        - host_3
+        literals:
+        - 10.118.115.90
+        - 10.131.228.212
+        - 10.23.0.0/17
+        - 10.40.252.0/23
+        - 10.15.128.0/18
       - name: network_group_3
         objects:
-        - network_8
-        - network_4
-        - host_3
-        - host_6
-        - range_3
+        - network_group_2
+        - network_10
+        - network_6
+        - host_4
+        - host_2
+        literals:
+        - 10.68.43.142
+        - 10.127.112.76
+        - 10.19.78.25
       - name: network_group_4
         objects:
-        - network_4
         - network_8
-        - range_2
+        - host_5
+        - host_3
         - host_9
-        - host_4
+        - network_3
+        literals:
+        - 10.48.127.128/27
+        - 10.69.182.125
+        - 10.38.216.71
+        - 10.213.115.93
+        - 10.137.141.0/27
       - name: network_group_5
         objects:
-        - network_1
-        - network_6
-        - range_3
+        - network_3
+        - host_5
+        - host_2
+        - network_2
+        literals:
+        - 10.2.197.169
+        - 10.246.178.0/27
+        - 10.199.255.95
       - name: network_group_6
         objects:
-        - network_3
-        - network_8
         - network_group_4
-        - host_9
+        - network_10
+        - range_1
+        literals:
+        - 10.128.174.132
+        - 10.188.102.108
+        - 10.67.35.85
+        - 10.54.61.244
+        - 10.99.160.0/19
       - name: network_group_7
         objects:
-        - range_3
-        - host_8
-        - host_9
+        - network_2
+        - network_6
+        - network_4
+        literals:
+        - 10.89.159.149
+        - 10.138.211.29
+        - 10.119.213.66
+        - 10.24.230.251
+        - 10.15.96.0/22
       - name: network_group_8
         objects:
-        - network_5
-        - host_1
-        - range_2
+        - network_group_3
+        - network_group_1
+        - network_group_4
+        - network_1
+        - network_9
+        literals:
+        - 10.99.105.16/28
+        - 10.36.216.43
+        - 10.114.182.144
       - name: network_group_9
         objects:
-        - host_1
-        - network_7
-        - range_2
-        - host_4
+        - host_5
+        - network_group_4
+        - range_4
+        literals:
+        - 10.170.43.121
+        - 10.162.60.241
+        - 10.185.57.64/26
       - name: network_group_10
         objects:
-        - host_2
-        - network_7
-        - network_1
         - network_group_9
+        - network_5
+        - range_1
+        - network_8
+        literals:
+        - 10.160.0.0/23
+        - 10.204.168.16/28
+        - 10.192.47.0/27
+        - 10.55.38.128/27
+        - 10.205.224.0/19
