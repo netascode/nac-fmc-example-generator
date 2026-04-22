@@ -141,9 +141,9 @@ def main():
             network_groups = generate_network_groups(network_groups_number, available_objects, network_groups_reuse)
             fmc_data = create_fmc_structure('network_groups', network_groups)
             write_output(fmc_data, 'network_groups.nac.yaml')
-            # Add network group names to available objects (only if reuse is enabled)
-            if network_groups_reuse:
-                available_objects.extend([ng['name'] for ng in network_groups])
+            # Always add network group names to available objects so access control policies can reference them
+            # The reuse flag only controls whether network groups can reference other network groups during generation
+            available_objects.extend([ng['name'] for ng in network_groups])
 
     # Generate URL groups (must be after URLs)
     if 'url_groups_number' in settings and len(available_url_objects) > 0:
