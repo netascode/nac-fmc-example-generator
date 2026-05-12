@@ -112,7 +112,7 @@ The generator supports the following FMC object types:
 - **Security Zones**: Random interface types (ROUTED, ASA, INLINE, SWITCHED)
 - **URLs**: Random subdomains of example.com from a predefined list
 - **Port Groups**: Each group contains 2-6 randomly selected objects (ports and icmpv4s only)
-- **Network Groups**: Each group contains 3-5 randomly selected objects (hosts, networks, ranges, or other network groups)
+- **Network Groups**: Each group contains 3-5 randomly selected objects (hosts, networks, ranges, or other network groups); nesting of network groups is limited to 5 levels deep
 - **URL Groups**: Each group contains 2-4 references to existing URL objects and 1-3 literal URL values using random subdomains of example.com
 - **Intrusion Policies**: Generated policies inherit from base policies defined in prerequisites file
 - **Access Control Policies**: Each policy contains specified number of categories and rules that reference generated network, service, URL, security zone, and intrusion policy objects

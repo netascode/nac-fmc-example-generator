@@ -4,12 +4,15 @@ settings:
   - ranges_number: 4
   - ports_number: 10
   - icmpv4s_number: 6
+  - fqdns_number: 10
   - security_zones_number: 10
   - port_groups_number: 5
   - network_groups_number: 10
   - network_groups_reuse: true # whether network groups can reference other network groups as objects
+  - network_groups_max_nesting_depth: 5 # maximum nesting depth for network groups
   - urls_number: 10
   - url_groups_number: 5
+  - time_ranges_number: 3
   - intrusion_policies_number: 3
   - access_control_policies_number: 1
   - access_control_policy_categories_number: 4

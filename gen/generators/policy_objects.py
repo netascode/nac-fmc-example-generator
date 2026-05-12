@@ -88,7 +88,8 @@ def generate_access_control_policies(
     available_port_objects,
     available_security_zones,
     available_intrusion_policies,
-    available_url_objects
+    available_url_objects,
+    available_time_ranges=None
 ):
     """
     Generate access control policy objects with sequential names.
@@ -195,6 +196,10 @@ def generate_access_control_policies(
                 rule['action'] not in ['BLOCK', 'TRUST', 'BLOCK_RESET', 'MONITOR'] and
                 random.random() > 0.7):
                 rule['intrusion_policy'] = random.choice(available_intrusion_policies)
+
+            # Add time range (5% chance)
+            if available_time_ranges and random.random() < 0.05:
+                rule['time_range'] = random.choice(available_time_ranges)
 
             # Add logging options
             # send_events_to_fmc is always true

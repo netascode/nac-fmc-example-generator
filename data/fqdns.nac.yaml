@@ -1,0 +1,25 @@
+fmc:
+  domains:
+  - name: Global
+    objects:
+      fqdns:
+      - name: fqdn_1
+        fqdn: fqdn1.example.com
+      - name: fqdn_2
+        fqdn: fqdn2.example.com
+      - name: fqdn_3
+        fqdn: fqdn3.example.com
+      - name: fqdn_4
+        fqdn: fqdn4.example.com
+      - name: fqdn_5
+        fqdn: fqdn5.example.com
+      - name: fqdn_6
+        fqdn: fqdn6.example.com
+      - name: fqdn_7
+        fqdn: fqdn7.example.com
+      - name: fqdn_8
+        fqdn: fqdn8.example.com
+      - name: fqdn_9
+        fqdn: fqdn9.example.com
+      - name: fqdn_10
+        fqdn: fqdn10.example.com

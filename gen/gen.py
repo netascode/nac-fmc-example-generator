@@ -6,10 +6,11 @@ Generates YAML files for nac-fmc Terraform module
 
 from utils.config import load_config, parse_config
 from utils.file_ops import clear_data_folder, write_output, create_fmc_structure, create_fmc_policy_structure
-from generators.network_objects import generate_hosts, generate_networks, generate_ranges
+from generators.network_objects import generate_hosts, generate_networks, generate_ranges, generate_fqdns
 from generators.service_objects import generate_ports, generate_icmpv4s, generate_port_groups
 from generators.url_objects import generate_urls, generate_url_groups
 from generators.zone_objects import generate_security_zones
+from generators.time_objects import generate_time_ranges
 from generators.group_objects import generate_network_groups
 from generators.policy_objects import (
     generate_intrusion_policies,
@@ -77,6 +78,17 @@ def main():
             # Add range names to available objects
             available_objects.extend([r['name'] for r in ranges])
 
+    # Generate FQDNs
+    if 'fqdns_number' in settings:
+        fqdns_number = settings['fqdns_number']
+        if fqdns_number > 0:
+            print(f"Generating {fqdns_number} FQDN(s)...")
+            fqdns = generate_fqdns(fqdns_number)
+            fmc_data = create_fmc_structure('fqdns', fqdns)
+            write_output(fmc_data, 'fqdns.nac.yaml')
+            # Add FQDN names to available objects
+            available_objects.extend([f['name'] for f in fqdns])
+
     # Generate ports
     if 'ports_number' in settings:
         ports_number = settings['ports_number']
@@ -121,6 +133,19 @@ def main():
             # Add URL names to available URL objects
             available_url_objects.extend([u['name'] for u in urls])
 
+    # Track available time range names for access control policies
+    available_time_ranges = []
+
+    # Generate time ranges
+    if 'time_ranges_number' in settings:
+        time_ranges_number = settings['time_ranges_number']
+        if time_ranges_number > 0:
+            print(f"Generating {time_ranges_number} time range(s)...")
+            time_ranges = generate_time_ranges(time_ranges_number)
+            fmc_data = create_fmc_structure('time_ranges', time_ranges)
+            write_output(fmc_data, 'time_ranges.nac.yaml')
+            available_time_ranges.extend([tr['name'] for tr in time_ranges])
+
     # Generate port groups (must be after ports and icmpv4s)
     if 'port_groups_number' in settings and len(available_port_objects) > 0:
         port_groups_number = settings['port_groups_number']
@@ -137,8 +162,9 @@ def main():
         network_groups_number = settings['network_groups_number']
         if network_groups_number > 0:
             network_groups_reuse = settings.get('network_groups_reuse', False)
+            network_groups_max_nesting_depth = settings.get('network_groups_max_nesting_depth', 5)
             print(f"Generating {network_groups_number} network group(s)...")
-            network_groups = generate_network_groups(network_groups_number, available_objects, network_groups_reuse)
+            network_groups = generate_network_groups(network_groups_number, available_objects, network_groups_reuse, network_groups_max_nesting_depth)
             fmc_data = create_fmc_structure('network_groups', network_groups)
             write_output(fmc_data, 'network_groups.nac.yaml')
             # Always add network group names to available objects so access control policies can reference them
@@ -190,7 +216,8 @@ def main():
                 available_port_objects,
                 available_security_zones,
                 available_intrusion_policies,
-                available_url_objects
+                available_url_objects,
+                available_time_ranges
             )
 
             # Write each policy to a separate file

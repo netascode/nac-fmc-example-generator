@@ -18,6 +18,18 @@ def generate_hosts(hosts_number):
     return hosts
 
 
+def generate_fqdns(fqdns_number):
+    """Generate FQDN objects with sequential names and example domain names"""
+    fqdns = []
+    for i in range(1, fqdns_number + 1):
+        fqdn = {
+            'name': f'fqdn_{i}',
+            'fqdn': f'fqdn{i}.example.com'
+        }
+        fqdns.append(fqdn)
+    return fqdns
+
+
 def generate_networks(networks_number):
     """Generate network objects with sequential names and random subnets"""
     networks = []
